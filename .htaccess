@@ -1,6 +1,3 @@
-<IfDefine Free>
-    php 1
-</IfDefine>
 Options -Indexes
 
 ErrorDocument 500 "Sorry, error server!

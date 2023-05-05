@@ -133,6 +133,9 @@ li {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    justify-content: space-around;
+    /* height: 16rem; */
+    /* height: 25vh; */
 }
 
 .shadow-box {
@@ -273,7 +276,11 @@ details[open] {
 }
 
 .skillProgress {
-    height: 2rem;
+    /* height: 3.5rem;
+    width: 2rem; */
+
+    height: 3rem;
+    width: 33vh;
     background-color: grey;
 }
 

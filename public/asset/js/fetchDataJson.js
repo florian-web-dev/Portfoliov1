@@ -86,10 +86,12 @@ async function fetchJson(url) {
 // fetchJson("public/asset/js/datas.json");
 
 
-const arrayLang = []
-const arrayFrame = []
-const arryOther = []
-const arrayMobil = []
+const arrayLang = [];
+const arrayFrame = [];
+const arryOther = [];
+const arrayMobil = [];
+const arrayCms = [];
+const arrayTools = [];
 function eachByKey() {
     fetchJson("public/asset/js/datas.json").then((datas) => {
 
@@ -104,11 +106,17 @@ function eachByKey() {
             let skillFrameWork = allSkills.framework;
             arrayFrame.push(skillFrameWork)
 
-            let skillsOther = allSkills.other[0];
+            let skillsOther = allSkills.other;
             arryOther.push(skillsOther)
 
             let skillsMobil = allSkills.mobil;
             arrayMobil.push(skillsMobil)
+
+            let skillsCms = allSkills.cms;
+            arrayCms.push(skillsCms)
+            
+            let skillTools = allSkills.tools
+            arrayTools.push(skillTools);
 
             // // ----------- Skill Language Frontend
             let dataLangFront = skillLang.frontend;
@@ -151,10 +159,7 @@ eachByKey()
 
 
 
-// console.log(arrayLang);
-// console.log(arrayFrame);
-// console.log(arryOther);
-// console.log(arrayMobil);
+
 
 const showProgress = document.querySelectorAll("[class*='showProgress-']")
 
@@ -169,7 +174,6 @@ showProgress.forEach(btnProgress => {
         } else {
             functionRunder = viewCard
         }
-
 
         eachFramLang(arrayLang, isFront, true, functionRunder)
     })
@@ -210,6 +214,11 @@ function eachData(allSkills, elm, callback = viewCard) {
     allSkills.forEach(skill => {
         chaine += callback(skill)
     });
+
+    // for (let i = 0; i < allSkills.length; i++) {
+    //     const skill = allSkills[i];
+    //     chaine += callback(skill)
+    // }
 
     elm.innerHTML = chaine;
 
@@ -283,9 +292,10 @@ function viewCard(data) {
     return `
     <div class="m-2 p-2" style="width: fit-content;">
         <div class="d-flex align-items-center flex-column">
-            <div style="" class="" title="${data.title}">
+            <div style="" class="" title="${data.name}">
                 <div class="box-svg">  
-                    ${data.svg}
+                    
+                    <img class="w-27" src="${data.image}" alt="image">
                 </div>
             </div>
             <div class="title-competence">
@@ -304,7 +314,22 @@ function viewFormation(data) {
     `
 }
 
-console.log(arrayMobil);
+// console.log(arrayLang);
+// console.log(arrayFrame);
+console.log(arryOther);
+// console.log(arryOther.tools);
+// console.log(arrayMobil);
+// console.log(arrayCms);
+console.log(arrayTools);
+
+function ttt() {
+    arryOther.forEach(other => {
+        console.log(other);
+       
+    });
+}
+
+
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée');
     eachFramLang(arrayLang, true, true, viewCard)
@@ -315,6 +340,13 @@ window.addEventListener('load', () => {
     eachFramLang(arrayFrame, false, false, viewCard)
 
     eachData(arrayMobil[0], idSectionMobil);
+
+    eachData(arrayCms[0], idSectionCms);
+
+    eachData(arrayTools[0], idSectionTools);
+
+
+    ttt()
 })
 
 // eachFramLang(arrayLang, true, true, viewCard)
