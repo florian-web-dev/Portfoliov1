@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edje">
+    <meta name="viewport" content="width=device-width" , inital-scale="1.0">
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <!-- <link rel="icon" type="image/x-icon" href="./public/img/favicon.ico"> -->
+
+    <!-- <link rel="stylesheet" href="./public/asset/css/bootstrap.css" type="text/CSS"> -->
+    <!-- <link rel="stylesheet" href="public/asset/css/bootstrap.min.css" type="text/CSS"> -->
+    <!-- 
+
+	<link rel="stylesheet" href="./public/asset/css/header.css" type="text/CSS">
+	<link rel="stylesheet" href="./public/asset/css/style.css" type="text/CSS"> -->
+
+    <!-- <link rel="stylesheet" href="content/css/stylemodal.css" type="text/CSS"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+</head>
+
+
+<?php
+// include_once '../fragments/header.php';
+// include_once './fragments/header.php';
+
+
+
+
+include_once '../fragments/nav.php';
+?>
+
+<section class="container">
+    <h1>Hello ! </h1>
+    <a href="javascript:history.back()">Page precedente</a>
+    <br>
+
+
+    <hr>
+
+    <hr>
+    SERVER_SOFTWARE
+    <?= $_SERVER["SERVER_SOFTWARE"] ?>
+
+    <hr>
+    <?= $_SERVER['REMOTE_ADDR']; ?>
+
+    <div class="row">
+        <p>/________COOKIE ALL___________/</p>
+        <?php
+        foreach ($_COOKIE as $k => $v) : ?>
+            <div class="col-auto ">
+
+                <?= '[key : ' . $k . ' | ' . ' valeur ' . $v . ']' . " - <br>"; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <?php
+
+    ?>
+</section>
+
+<!------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------- Api Meteo --------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+<section>
+     <div class="mb-3 rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700 w-4/5">
+        <form id="form-weather">
+            <fieldset>
+                <legend>Affiche meteo par ville France metropole</legend>
+                <div class="form-floating">
+
+                    <input class="form-control" type="text" name="city" id="city">
+                    <label for="city">Nom de la ville :</label>
+                </div>
+                <div>
+                    <input class="form-control" type="number" name="postcode" id="postcode">
+                    <label for="postcode">Code postal de la ville</label>
+                </div>
+
+                <button type="submit" data-te-ripple-init data-te-ripple-color="light" class="btn inline-block rounded bg-teal-900 px-6 pb-2 pt-2.5 my-3 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-teal-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-teal-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-teal-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                    Envoyer
+                </button>
+            </fieldset>
+
+        </form>
+
+
+    </div> 
+
+    <div class="flex">
+        <div class="flex-1 m-2">
+            <p>Exercice Fetch objectif : récupérer les informations météo à partir de l'api
+                géolocalisation des navigateurs afin de tester le fonctionnement de l'api géolocalisation des
+                navigateurs.</p>
+            <p id="status"></p>
+            <button id="ask-weather" type="submit" data-te-ripple-init data-te-ripple-color="light" class="btn inline-block rounded bg-teal-900 px-6 pb-2 pt-2.5 my-3 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-teal-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-teal-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-teal-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                Meteo</button>
+        </div>
+        <div class="flex-1" id="weather-result"></div>
+
+    </div>
+
+
+</section>
+<!------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------- Api Meteo --------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!-- <script src="../public/asset/js/index.js"></script> -->
+<script src="../public/asset/js/fectchapi.js"></script>
+<footer>
+
+</footer>
+
+</body>
+
+</html>

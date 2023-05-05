@@ -1,0 +1,16 @@
+<IfDefine Free>
+    php 1
+</IfDefine>
+Options -Indexes
+
+ErrorDocument 500 "Sorry, error server!
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+AddDefaultCharset utf-8
+AddLanguage fr .fr.html
+AddLanguage en .en.html
+AddLanguage fr .fr.js
+AddLanguage en .en.js
+
+LanguagePriority fr en

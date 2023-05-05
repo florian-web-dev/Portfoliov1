@@ -1,0 +1,121 @@
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------ NAV ----------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+
+.menu{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* .navbar-size{
+    height: 20vh;
+} */
+
+.nav-item{
+    text-decoration: none;
+    font-size: large;
+    letter-spacing: .1em;
+    margin: 0 0.1rem 0 0.1rem;
+}
+.nav-link{
+    color: snow;
+    border-bottom: 1px solid silver;
+    padding: 0.5rem;
+    text-shadow: 1px 1px 2px black;
+    
+}
+.nav-link:hover{
+    /* transform: scale(1.1); */
+    border-bottom: 2px solid silver;
+    box-shadow: inset 0 0 2px 2px rgb(253 253 253 / 12%);
+    color: snow;
+    padding: 0.5 rem;
+}
+.nav-menu-bgColor{
+    background: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4);
+}
+
+.currentSelec{
+
+    color: snow !important;
+    box-shadow: inset 0 0 2px 2px rgb(253 253 253 / 12%),inset 0 0 12px 6px rgb(253 253 253 / 23%);
+    transform: scale(1.1);
+    border-radius: 1rem 1rem 0 0;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------ CONTENT HEADER ----------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+.construction{
+    /* display: flex;
+    justify-content: center; */
+    color: snow;
+    font-style: oblique;
+}
+
+.field{
+    display: -webkit-box;
+    position: relative;
+    top: 30%;
+    text-align: center;
+    color: snow;
+}
+
+.baseline-welcome{
+    text-transform: capitalize;
+}
+
+.baseline-name{
+    opacity: .7;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+
+.baseline-slogan{
+    text-transform: capitalize;
+}
+
+
+/* ---------------------------------------------------------------------------------------
+                                        Particules
+--------------------------------------------------------------------------------------- */
+
+.header{
+    height: 70vh;
+    background: linear-gradient(45deg, black, transparent),
+                linear-gradient(45deg, transparent, black);
+    /* background-image: url(''); */
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+.header-404{
+    background: linear-gradient(45deg, black, transparent),
+                linear-gradient(45deg, transparent, black);
+  }
+
+.displayElmt {
+    /* display: list-item; */
+    display: block;
+}
+
+.displayNone {
+    display: none;
+}
+
+/* ---------------------------------------------------------------------------------------
+                                        Media
+--------------------------------------------------------------------------------------- */
+
+
+  /* @media (min-width: 990px) {
+
+}
+
+@media (max-width: 990px) {
+
+
+} */
