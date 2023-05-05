@@ -62,7 +62,7 @@ async function fetchJson(url) {
 
             let datas = await response.json();
 
-            console.log(datas);
+            // console.log(datas);
 
             // let skills = datas.skills
             // let langData = skills[0].language
@@ -96,7 +96,7 @@ function eachByKey() {
     fetchJson("public/asset/js/datas.json").then((datas) => {
 
         // console.log(datas.skills[0].language);
-        console.log( datas.skills);
+        // console.log( datas.skills);
 
         for (const allSkills of datas.skills) {
 
@@ -316,18 +316,13 @@ function viewFormation(data) {
 
 // console.log(arrayLang);
 // console.log(arrayFrame);
-console.log(arryOther);
+// console.log(arryOther);
 // console.log(arryOther.tools);
 // console.log(arrayMobil);
 // console.log(arrayCms);
-console.log(arrayTools);
+// console.log(arrayTools);
 
-function ttt() {
-    arryOther.forEach(other => {
-        console.log(other);
-       
-    });
-}
+
 
 
 window.addEventListener('load', () => {
@@ -346,7 +341,6 @@ window.addEventListener('load', () => {
     eachData(arrayTools[0], idSectionTools);
 
 
-    ttt()
 })
 
 // eachFramLang(arrayLang, true, true, viewCard)
