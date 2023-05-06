@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edje">
     <meta name="viewport" content="width=device-width" , inital-scale="1.0">
     <meta charset="utf-8">
-   <!-- Meta for git -->
-   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
- 
+    <!-- Meta for git -->
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="./public/img/favicon.ico">
 
@@ -162,12 +162,32 @@
                     </div>
 
                 </div>
+                <hr>
                 <h3 class="text-center">Autres Outils</h3>
-                <div class="row mx-0">
-                    <div class="col shadow-box">
-                        <div class="container-flex-skill" id="uml"></div>
+                <div class="d-flex align-items-center justify-content-around">
+                    <div class="">
+                        <!-- <div class="container-flex-skill" id="uml"></div> -->
+                        <div class=" mb-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="public/img/tools/UML_logo.svg" class="img-fluid rounded-start"
+                                        alt="Logo UML" title="Unified Modeling Language">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+
+                                        <ul class="list-group" id="uml">
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div class="col shadow-box">
+                    <div class="">
                         <div class="container-flex-skill" id="tools"></div>
                     </div>
                 </div>
@@ -176,6 +196,7 @@
                 <div class="container-flex-skill col" id="competence-in-progress">
 
                 </div>
+
 
 
             </div>
@@ -277,8 +298,12 @@
         </div>
 
         <p class="text-center"> Partie en cours de développement </p>
-
+        <!-- <div class="html"></div>
+        <div class="css"></div>
         <div class="js"></div>
+        <div class="php"></div>
+        <div class="java"></div>
+        <div class="sql"></div> -->
         <details>
             <summary>Details</summary>
 
@@ -348,88 +373,117 @@
             <summary> projet Suivi Séance Java</summary>
 
 
-            <div class="container">
 
-                <h2>Résumé expression des besoins du projet Suivi Séance </h2>
-                <div class="p-4">
-                    <p>Le client est un coordinateur d’un centre de formation, il veut automatiser une tache que les
-                        formateurs effectuent après chaque séance.
-                        Les formateurs doivent remplir une fiche de suivi afin de retracer les différentes compétences
-                        aborder à chaque séance.
-                        Suite a une analyse avec le client j’ai fait le choix d’importer une partie des données à partir
-                        d’un fichier Excel afin de simplifier la saisi des différentes informations.
-                    </p>
-
-
-                </div>
-
-                <div class="w-75 row align-items-center m-auto shadow-box">
-                    <h6 class="text-center">Langage, framework et base de donnée utlisé pour le projet</h6>
-
-                    <div class="col-sm-6 ">
-
-                        <div class="row ">
-                            <div class="col-auto html">
-                                html
-                            </div>
-                            <div class="col-auto css">
-                                css
-                            </div>
-                            <div class="col-auto java">
-                                java
-                            </div>
-                            <div class="col-auto sql">
-                                sql
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-sm-6">
-
-                        <div class="row ">
-                            <div class="col-auto">Spring boot</div>
-                            <div class="col-auto">Thymeleaf</div>
-                            <div class="col-auto">H2</div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div class="row align-items-center m-auto">
-
-                    <div class="px-4 col-sm-4">
-                        <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/ficheSuivi.jpg"
-                            data-caption="<b>Fiche suivi séance </b> <br/> Projet suivi séance.">
-                            <img class="w-75" src="public/img/realisation/ficheSuivi.jpg"></a>
-                        <figcaption class="">Analyse de la fiche de suivi des séances.</figcaption>
-                    </div>
-
-                    <div class="px-4 col-sm-4">
-                        <a class="m-2" data-fancybox="real-ssg"
-                            data-src="public/img/realisation/UseCaseSuivieSeance.jpg"
-                            data-caption="<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance.">
-                            <img class="w-75" src="public/img/realisation/UseCaseSuivieSeance.jpg"></a>
-                        <figcaption class="">Use case de l'ensemble du projet.</figcaption>
-                    </div>
-
-                    <div class="px-4 col-sm-4">
-                        <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/localdb.png"
-                            data-caption="<b>Diagrammes entité-association</b> <br/> Projet suivi séance.">
-                            <img class="w-75" src="public/img/realisation/localdb.png"></a>
-                        <figcaption class="">Diagrammes représentant les tables du projet.</figcaption>
-                    </div>
-
-                </div>
-
-
-            </div>
         </details>
 
+        <article class="container  shadow-box">
 
+            <h2>Projet Suivi Séance </h2>
+
+            <div class="row">
+
+                <div class="col-8 p-4">
+                    <h3 class="text-align">Résumé expression des besoins</h3>
+                    <div class="p-4 m-2">
+                        <p>Le client est un coordinateur d’un centre de formation, il veut automatiser une tache que les
+                            formateurs effectuent après chaque séance.
+                        </p>
+                        <p>Les formateurs doivent remplir une fiche de suivi papier afin de retracer les différentes
+                            compétences aborder à chaque séance.
+                        </p>
+                        <p title="Sprint backlog">
+                            Différents échanges avec le client, on permit d'établir un backlog produit
+                        </p>
+                        <p title="Sprint">
+                            Après diffèrent itération successive j'ai atteins les objectifs avant la deadline, j'ai
+                            profité de ce temps supplémentaire pour réévaluer les besoins du client.
+                        </p>
+                        <p title="collaboration avec les clients plutôt qu'à la négociation contractuelle">
+                            Il est apparu lors de cette réévaluation que le responsable de formation doit saisir
+                            l'information de la fiche de suivi dans un tableau Excel, j'ai donc proposé une
+                            fonctionnalise d'import-export des données.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <h6 class="text-center">Langage, framework et base de donnée utlisé pour le projet</h6>
+                    <table class="w-50 table text-center">
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>FrameWork</th>
+                                <th title="SGBD | Système de Gestion de Base de Données">Base de données</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="">
+                                    <p class="html"></p>
+                                    <p class="css"></p>
+                                    <p class="js"></p>
+                                </td>
+                                <td class="">
+                                    <img class="" src="public/img/tools/thymeleaf.png" alt="Thymeleaf"
+                                        title="moteur de template" style="width: 3rem;">
+                                    <p>
+                                        Thymeleaf
+                                    </p>
+
+                                </td>
+                                <td>
+                                    <img class="" src="public/img/tools/h2-logo-2.png" alt="H2" title="SGBD"
+                                        style="width: 5rem;">
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="">
+                                    <p class="java"></p>
+                                </td>
+                                <td class="">
+                                    <img class="pt-4" src="public/img/framework/spring-logo.svg"
+                                        title="Spring boot" alt="Spring boot" style="width:10rem;">
+                                </td>
+                                <td></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+            <div class="row align-items-center m-auto">
+
+                <div class="px-4 col-sm-4">
+                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/ficheSuivi.jpg"
+                        data-caption="<b>Fiche suivi séance </b> <br/> Projet suivi séance.">
+                        <img class="w-75" src="public/img/realisation/ficheSuivi.jpg"></a>
+                    <figcaption class="">Analyse de la fiche de suivi des séances.</figcaption>
+                </div>
+
+                <div class="px-4 col-sm-4">
+                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/UseCaseSuivieSeance.jpg"
+                        data-caption="<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance.">
+                        <img class="w-75" src="public/img/realisation/UseCaseSuivieSeance.jpg"></a>
+                    <figcaption class="">Use case de l'ensemble du projet.</figcaption>
+                </div>
+
+                <div class="px-4 col-sm-4">
+                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/localdb.png"
+                        data-caption="<b>Diagrammes entité-association</b> <br/> Projet suivi séance.">
+                        <img class="w-75" src="public/img/realisation/localdb.png"></a>
+                    <figcaption class="">Diagrammes représentant les tables du projet.</figcaption>
+                </div>
+
+            </div>
+
+
+        </article>
     </section>
 
     <!-- ---------------------------------------------------------------------------------------------------->

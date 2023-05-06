@@ -55,7 +55,7 @@ const myInit = {
 
 async function fetchJson(url) {
     try {
-        let response = await fetch(url,myInit )
+        let response = await fetch(url, myInit)
         // console.log(`try : Reponse : ${response.status} ${response.statusText} `)
         // console.log(response);
         if (response.ok) {
@@ -88,7 +88,7 @@ async function fetchJson(url) {
 
 const arrayLang = [];
 const arrayFrame = [];
-const arryOther = [];
+const arrayAnalyse = [];
 const arrayMobil = [];
 const arrayCms = [];
 const arrayTools = [];
@@ -106,30 +106,28 @@ function eachByKey() {
             let skillFrameWork = allSkills.framework;
             arrayFrame.push(skillFrameWork)
 
-            let skillsOther = allSkills.other;
-            arryOther.push(skillsOther)
+            let skillsAnalyse = allSkills.analyse;
+            arrayAnalyse.push(skillsAnalyse)
 
             let skillsMobil = allSkills.mobil;
             arrayMobil.push(skillsMobil)
 
             let skillsCms = allSkills.cms;
             arrayCms.push(skillsCms)
-            
+
             let skillTools = allSkills.tools
             arrayTools.push(skillTools);
 
             // // ----------- Skill Language Frontend
             let dataLangFront = skillLang.frontend;
 
-            // // eachData(dataLangFront, idSectionLangFront);
-
             // // ----------- Skill Language Backend
             let dataLangBack = skillLang.backend;
-            // console.log(dataLangBack);
-
-            // console.log(skillLang);
 
 
+            // console.log(dataLangFront);
+            // console.log(arrayNameClass);
+            // console.log(arrayNodeListLangF);
             //----- add class -> show card -----
             arrayNameClass.forEach(nodeElmName => {
                 eachClassName(dataLangFront, nodeElmName, arrayNodeListLangF);
@@ -179,7 +177,13 @@ showProgress.forEach(btnProgress => {
     })
 });
 
-
+/**
+ * 
+ * @param {Array} arrayFramOrLanf 
+ * @param {Boolean} isFront 
+ * @param {Boolean} isLang 
+ * @param {callback} callbackRunder 
+ */
 function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
 
     let keyType = "";
@@ -196,7 +200,7 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
             // elemId = idSectionLangBack
             elemId = isLang ? idSectionLangBack : idSectionFramBack;
         }
-        
+
         eachData(keyType, elemId, callbackRunder)
     }
 }
@@ -209,16 +213,10 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
  */
 function eachData(allSkills, elm, callback = viewCard) {
     let chaine = "";
-    // console.log(typeof allSkills);
 
     allSkills.forEach(skill => {
         chaine += callback(skill)
     });
-
-    // for (let i = 0; i < allSkills.length; i++) {
-    //     const skill = allSkills[i];
-    //     chaine += callback(skill)
-    // }
 
     elm.innerHTML = chaine;
 
@@ -231,16 +229,15 @@ function eachData(allSkills, elm, callback = viewCard) {
  * @param {Array} arrayNodeList is list to nodeList
  * @param {node} node Element
  */
-function eachClassName(dataObj, className, arrayNodeList = null, elm = null) {
+function eachClassName(dataObj, className, arrayNodeList = null, elm = null, ) {
 
     let chaine = "";
     for (let obj of dataObj) {
 
         if (obj.slug == className) {
 
-            chaine += viewCard(obj);
-            // console.log(element.title + ' ' + element.name);
-
+            // chaine += viewCard(obj, "3rem");
+            chaine += viewLanguageLogo(obj, "3rem");
         }
 
         if (arrayNodeList != null && obj.slug == className) {
@@ -255,7 +252,7 @@ function eachClassName(dataObj, className, arrayNodeList = null, elm = null) {
             })
         }
         if (elm != null) {
-            // console.log(elm);
+
             elm.innerHTML = chaine
         }
 
@@ -288,14 +285,15 @@ function viewCardProgress(data) {
 
 
 // 
-function viewCard(data) {
+function viewCard(data, size = null) {
+
     return `
     <div class="m-2 p-2" style="width: fit-content;">
         <div class="d-flex align-items-center flex-column">
             <div style="" class="" title="${data.name}">
                 <div class="box-svg">  
                     
-                    <img class="w-27" src="${data.image}" alt="image">
+                    <img class="w-27" src="${data.image}" alt="image" style="width: ${size};">
                 </div>
             </div>
             <div class="title-competence">
@@ -314,16 +312,29 @@ function viewFormation(data) {
     `
 }
 
+function viewLanguageLogo(data, size = null, className = null) {
+    return `
+        <img class="className" src="${data.image}" alt="${data.name}" title="${data.name}" style="width: ${size};"></img>
+    `
+}
+
+function viewList(data) {
+    return `
+
+        <li class="list-group-item">${data.name}</li>
+    `
+}
 // console.log(arrayLang);
 // console.log(arrayFrame);
-// console.log(arryOther);
-// console.log(arryOther.tools);
+
+// console.log(arrayAnalyse.tools);
 // console.log(arrayMobil);
 // console.log(arrayCms);
+
 // console.log(arrayTools);
 
-
-
+// console.log(arrayAnalyse);
+console.log(arrayLang);
 
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée');
@@ -339,6 +350,9 @@ window.addEventListener('load', () => {
     eachData(arrayCms[0], idSectionCms);
 
     eachData(arrayTools[0], idSectionTools);
+
+
+    eachData(arrayAnalyse[0], idSectionUml, viewList);
 
 
 })

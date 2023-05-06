@@ -159,6 +159,7 @@ function viewFormation(data) {
     `
 }
 
+
 const BtnShowProgressFront = document.querySelector('#ShowProgressFront');
 
 
