@@ -253,7 +253,7 @@ function viewCard(data, size = null) {
     <div class="m-2 p-2" style="width: fit-content;">
         <div class="d-flex align-items-center flex-column">
             <div style="" class="" title="${data.name}">
-                <div class="box-svg">  
+                <div class="">  
                     
                     <img class="w-75" src="${data.image}" alt="image" style="width: ${size};">
                 </div>

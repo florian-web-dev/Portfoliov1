@@ -180,29 +180,10 @@ li {
 
 
 
-
-
-
-
 /* ---------------------------------------------------------------------------------------
                                         Section Réalisation
 --------------------------------------------------------------------------------------- */
 
-
-.test {
-    width: 10vw;
-
-}
-
-
-.img-realistion-wrap {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
 
 .flex-wrap-container {
     display: flex;
@@ -210,7 +191,7 @@ li {
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    width: 75%;
+    width: 80%;
 }
 
 .card-achiev {
@@ -409,15 +390,20 @@ details[open] {
     }
 
 
+
 }
 
-/* @media (min-width: 990px) {
+@media (min-width: 990px) {
 
-    .msgDoc {
+    /* .msgDoc {
         display: none;
     }
 
-} */
+    .field{
+        right: 30%;
+        left: 30%;
+    } */
+}
 
 
 /* ----------CSS footer ----------------------*/
