@@ -43,7 +43,7 @@
 
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-size sticky-top nav-menu-bgColor ">
+    <nav class="navbar navbar-expand-lg navbar-size sticky-top nav-menu-bgColor " id="navbar">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -63,9 +63,6 @@
                         <a class="nav-link " aria-current="competences" href="./#competences">Compétence</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="formations" href="./#formations">Formations</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link " aria-current="realisation" href="./#realisation">Réalisation</a>
                     </li>
 
@@ -80,418 +77,443 @@
     <!-- ---------------------------------------------------------------------------------------------------->
     <!----------------------------------------------- Main -------------------------------------------------->
     <!-- ---------------------------------------------------------------------------------------------------->
-    <section class="container-fluid p-4 d-flex align-items-center presentation-hei observ" id="presentation">
+    <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+        <section class="container-fluid p-4 d-flex align-items-center presentation-hei " id="presentation">
 
-        <div class="text-center m-auto p-2 w-75">
-            <h2>Présentation | À propos de moi </h2>
-            <p class="">
-                Il y a quelque temps, j'ai eu la chance de participer à une formation au sein de Simplon.co afin de
-                découvrir le monde du numérique ses métiers, son environnement, j'ai eu une révélation à propos du
-                développement web, j'en ferais mon futur métier et c'est comme ça que j'ai suivie plusieurs formation
-                pour avoir aujourd'hui un équivalent Bac+3 dans le domaine, j'ai obtenue diverses certifications comme
-                amorcer un projet en agilité, la qualité web et des titres professionnels comme <strong>développeur
-                    web</strong>, <strong>Concepteur développeur d'application</strong>, <a href="#formations">ici pour
-                    voir plus</a>, durant mon parcours de formation, j'ai eu l'opportunité réalisé divers projets, de
-                l'analyse au travers de divers diagrammes a la réalisation du code sans oublier le maquettage, je
-                continue à me former en réalisant divers projets personnels.</p>
-        </div>
+            <div class="text-center m-auto p-2 w-75">
+                <h2 class="m-4">Présentation | À propos de moi </h2>
+                <p class="text-break">
+                    Il y a quelque temps, j'ai eu la chance de participer à une formation au sein de Simplon.co afin de
+                    découvrir le monde du numérique ses métiers, son environnement, j'ai eu une révélation à propos du
+                    développement web, j'en ferais mon futur métier et c'est comme ça que j'ai suivie plusieurs
+                    formation
+                    pour avoir aujourd'hui un équivalent Bac+3 dans le domaine, j'ai obtenue diverses certifications
+                    comme
+                    amorcer un projet en <strong>agilité</strong>, <strong> qualité web</strong> et des titres
+                    professionnels comme <strong title="Équivalent bac+2">développeur
+                        web</strong>, <strong title="Équivalent bac+3">Concepteur développeur d'application</strong>
+                    durant mon parcours de
+                    formation, j'ai eu l'opportunité réalisé divers projets, de
+                    l'analyse au travers de divers diagrammes a la réalisation du code sans oublier le maquettage, je
+                    continue à me former en réalisant divers projets personnels.</p>
+            </div>
 
-    </section>
+        </section>
 
-    <!-- ---------------------------------------------------------------------------------------------------->
-    <!------------------------------------------- Compétences ----------------------------------------------->
-    <!-- ---------------------------------------------------------------------------------------------------->
-    <section class="reveal observ" id="competences">
-        <div class="reveal-1">
-            <h2 class="title-section">Compétences</h2>
-        </div>
-        <div class="row mx-0 ">
-            <div class="imgskill col-xs-12 col-sm-4"
-                style="background-image: url(public/img/markus-spiske-unsplash.jpg)"></div>
+        <!-- ---------------------------------------------------------------------------------------------------->
+        <!------------------------------------------- Compétences ----------------------------------------------->
+        <!-- ---------------------------------------------------------------------------------------------------->
+        <section class="reveal " id="competences">
+            <div class="reveal-1">
+                <h2 class="title-section">Compétences</h2>
+            </div>
+            <div class="row mx-0 ">
+                <div class="imgskill col-xs-12 col-sm-4"
+                    style="background-image: url(public/img/markus-spiske-unsplash.jpg)"></div>
 
-            <div class="col-xs-12 col-sm-8 text-center">
+                <div class="col-xs-12 col-sm-8 text-center">
 
-                <h3 class="text-center">Langage</h3>
-                <div class="row mx-0 reveal-1">
+                    <h3 class="text-center">Langage</h3>
+                    <div class="row mx-0 reveal-1">
 
-                    <div class="col reveal-2 shadow-box">
-                        <h4>Frontend</h4>
-                        <div class="container-flex-skill" id="langFront"></div>
+                        <div class="col reveal-2 shadow-box">
+                            <h4>Frontend</h4>
+                            <div class="container-flex-skill" id="langFront"></div>
 
-                        <div class="form-check form-switch flex-col-reverse-end">
-                            <input class="form-check-input showProgress-front" type="checkbox" id="progressFront">
-                            <label class="form-check-label" for="progressFront">Progess bar</label>
-                        </div>
-                    </div>
-
-                    <div class="col reveal-2 shadow-box">
-                        <h4>Backend</h4>
-                        <div class="container-flex-skill col" id="langBack"></div>
-
-                        <div class="form-check form-switch flex-col-reverse-end">
-                            <input class="form-check-input showProgress-back" type="checkbox" id="progressBack">
-                            <label class="form-check-label" for="progressBack">Progess bar</label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <h3 class="text-center">Framework</h3>
-                <div class="row mx-0 reveal-1">
-
-                    <div class="col reveal-2 shadow-box">
-                        <h4>Frontend</h4>
-                        <div class="container-flex-skill" id="framFront"></div>
-                    </div>
-
-                    <div class="col reveal-2 shadow-box">
-                        <h4>Backend</h4>
-                        <div class="container-flex-skill" id="framBack"></div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row mx-0 reveal-1">
-                    <div class="col reveal-2 shadow-box">
-                        <h4 class="text-center">Mobil</h4>
-                        <div class="container-flex-skill" id="mobil"></div>
-                    </div>
-
-                    <div class="col reveal-2 shadow-box">
-                        <h4 class="text-center" title="Content Manager System">CMS</h4>
-                        <div class="container-flex-skill" id="cms"></div>
-                    </div>
-
-                </div>
-                <hr>
-                <h3 class="text-center">Autres Outils</h3>
-                <div class="d-flex align-items-center justify-content-around">
-                    <div class="">
-                        <!-- <div class="container-flex-skill" id="uml"></div> -->
-                        <div class=" mb-3">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-md-4">
-                                    <img src="public/img/tools/UML_logo.svg" class="img-fluid rounded-start"
-                                        alt="Logo UML" title="Unified Modeling Language">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-
-                                        <ul class="list-group" id="uml">
-
-                                        </ul>
-
-                                    </div>
-                                </div>
+                            <div class="form-check form-switch flex-col-reverse-end">
+                                <input class="form-check-input showProgress-front" type="checkbox" id="progressFront">
+                                <label class="form-check-label" for="progressFront">Progess bar</label>
                             </div>
                         </div>
 
+                        <div class="col reveal-2 shadow-box">
+                            <h4>Backend</h4>
+                            <div class="container-flex-skill col" id="langBack"></div>
 
-                    </div>
-                    <div class="">
-                        <div class="container-flex-skill" id="tools"></div>
-                    </div>
-                </div>
-
-
-                <div class="container-flex-skill col" id="competence-in-progress">
-
-                </div>
-
-
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- ---------------------------------------------------------------------------------------------------->
-    <!------------------------------------------- Formations ------------------------------------------------>
-    <!-- ---------------------------------------------------------------------------------------------------->
-    <section class="reveal observ" id="formations">
-        <div class="space"></div>
-        <div class="text-center" id="">
-            <h3 class="title-section m-0">Formation</h3>
-        </div>
-
-
-        <div class="banner-deco mb-4"></div>
-
-
-        <div class="w-75 m-auto">
-
-
-            <div class="row align-items-center ">
-                <div class="col-4 shadow-box">
-                    <h5 class="m-2">Centre de Formation</h5>
-                    <hr>
-                    <img class="w-100" src="public/img/gmte94.png" alt="Logo Greta" srcset="">
-
-                </div>
-
-                <div class="col-8 shadow-box">
-                    <h5 class="m-2">Diplôme obtenu</h5>
-                    <hr>
-                    <div class="m-2 p-4" id="formationDw">
-
-                    </div>
-                    <hr>
-                    <div class="m-2 p-4" id="formationCda">
-
-                    </div>
-
-                </div>
-
-            </div>
-            <hr>
-
-            <!-- -------------------------------------------------------------------------------------------->
-            <!------------------------------------------- Référent digital ---------------------------------------------->
-            <!-- -------------------------------------------------------------------------------------------->
-
-            <div class="shadow-box m-4 p-4 reveal-3 ">
-                <h5 class="text-center"><strong>Référent digital</strong></h5>
-                <div class="row align-items-center justify-content-center">
-
-                    <div class="col col-sm-6 text-center">
-                        <h5>Centre de Formation</h5>
-                        <img src="public/img/logo_Simplon.svg" alt="logo Simplon.co" class="w-50">
-                    </div>
-
-                    <div class="col-sm-6 p-4">
-
-                        <div class="w-75 m-auto">
-                            <h5><u>Compétences acquises :</u></h5>
-
-                            <ul class="list-formation">
-                                <li>Creation de site Wordpress</li>
-                                <li>Bonne pratique web</li>
-                                <li>Bonne pratique SEO</li>
-                                <li>Amorcage de gestion de projet en methode agiles</li>
-                            </ul>
+                            <div class="form-check form-switch flex-col-reverse-end">
+                                <input class="form-check-input showProgress-back" type="checkbox" id="progressBack">
+                                <label class="form-check-label" for="progressBack">Progess bar</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="text-center">
-                        <h5><u>J'ai aussi obtenu les certifications</u> : </h5>
-                        <div class="list-formation">
-                            <p title="(CNCP 2085)"><strong>Méthodes agiles</strong> de gestion et amorçage de projet</p>
-                            <p title="(CNCP 2083)">Réaliser un site web internet à partir de <strong>Wordpress</strong>
+
+
+                    <h3 class="text-center">Framework</h3>
+                    <div class="row mx-0 reveal-1">
+
+                        <div class="col reveal-2 shadow-box">
+                            <h4>Frontend</h4>
+                            <div class="container-flex-skill" id="framFront"></div>
+                        </div>
+
+                        <div class="col reveal-2 shadow-box">
+                            <h4>Backend</h4>
+                            <div class="container-flex-skill pt-3" id="framBack"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mx-0 reveal-1">
+                        <div class="col reveal-2 shadow-box">
+                            <h4 class="text-center">Mobil</h4>
+                            <div class="container-flex-skill" id="mobil"></div>
+                        </div>
+
+                        <div class="col reveal-2 shadow-box">
+                            <h4 class="text-center" title="Content Manager System">CMS</h4>
+                            <div class="container-flex-skill" id="cms"></div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <h3 class="text-center">Autres Outils</h3>
+                    <div class="d-flex align-items-center justify-content-around">
+                        <div class="">
+                            <!-- <div class="container-flex-skill" id="uml"></div> -->
+                            <div class=" mb-3">
+                                <div class="row g-0 align-items-center">
+                                    <div class="col-md-4">
+                                        <img src="public/img/tools/UML_logo.svg" class="img-fluid rounded-start"
+                                            alt="Logo UML" title="Unified Modeling Language">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+
+                                            <ul class="list-group" id="uml">
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="">
+                            <div class="container-flex-skill" id="tools"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="container-flex-skill col" id="competence-in-progress">
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ---------------------------------------------------------------------------------------------------->
+        <!------------------------------------------- Réalisation ----------------------------------------------->
+        <!-- ---------------------------------------------------------------------------------------------------->
+       
+   <div class="banner-deco"></div>
+        <section class="reveal container-fluid p-0" id="realisation">
+
+            <div class="reveal-1">
+                <h2 class="title-section">Réalisation</h2>
+            </div>
+         
+            <p class="text-center "> Partie en cours de développement </p>
+
+
+            <a href="/pages/realisation.html" target="_blank" rel="noopener noreferrer">Réalisation</a>
+
+            <article class="text-center reveal">
+                <h3 class="reveal-1">Realiser en formation </h3>
+                <div class="flex-wrap-container m-auto reveal-3">
+
+
+                    <div class="card-achiev m-3 rounded">
+                        <img src="public/img/noir.jpg" alt="Projet Suivi Séance" alt="Projet Suivi Séance"
+                            class="w-100" />
+                        <div class="fadedbox">
+
+                            <h5 class="title-fade">Suivi Séance</h5>
+                            <div class="card-body-achiev">
+                                <p title="Concepteur Développeur Application">Projet Java C.D.A.</p>
+                                <a href="/pages/realisation.html" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Voir</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-achiev m-3 rounded">
+                        <img src="public/img/noir.jpg" class="w-100" alt="">
+
+                        <div class="fadedbox">
+
+                            <h5 class="title-fade" >E-commerce</h5>
+                            <div class="card-body-achiev">
+                                <p title="Développeur Web Web Mobil">Projet PHP full vanilla DWWM</p>
+                                <a href="http://" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Voir</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-achiev m-3 rounded">
+                        <img src="public/img/noir.jpg" class="w-100" alt="">
+
+                        <div class="fadedbox">
+                            <h5 class="title-fade">Mini projet</h5>
+                            <div class="card-body-achiev">
+                                <p>text</p>
+                                <a href="http://" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Voir</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h3 class="reveal-1">Realiser en autodidacte </h3>
+                <div class="flex-wrap-container m-auto reveal-3">
+
+                    <div class="card-achiev m-3 rounded">
+                        <img src="public/img/noir.jpg" class="w-100" alt="">
+
+                        <div class="fadedbox">
+                            <h5 class="title-fade">Projet Api</h5>
+                            <div class="card-body-achiev">
+                                <p>Api Java / Api Lavarel</p>
+                                <a href="http://" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Voir</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-achiev m-3 rounded">
+                        <img src="public/img/noir.jpg" class="w-100" alt="">
+
+                        <div class="fadedbox">
+                            <h5 class="title-fade">Blog laravel</h5>
+                            <div class="card-body-achiev">
+                                <p>text</p>
+                                <a href="http://" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Voir</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-achiev m-3 rounded">
+                        <img src="public/img/noir.jpg" class="w-100" alt="">
+
+                        <div class="fadedbox">
+                            <h5 class="title-fade">E-commerce Laravel</h5>
+                            <div class="card-body-achiev">
+                                <p>text</p>
+                                <a href="http://" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Voir</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </article>
+
+            <details>
+                <summary>Details</summary>
+
+                <div class="row">
+                    <div class="col">
+                        Réalisation en formation
+                        <div class="row">
+
+                            <div class="col" style="width: 33%;">
+                                <a href="http://">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                        <rect x="0" y="0" width="100%" height="100%" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="col" style="width: 33%;">
+                                <a href="http://">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                        <rect x="0" y="0" width="100%" height="100%" stroke="red" stroke-width="5"
+                                            rx="5" ry="5" />
+                                    </svg>
+
+                                </a>
+                            </div>
+
+                            <div class="col" style="width: 33%;">
+                                <a href="http://">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+                                        <rect x="0" y="0" width="100%" height="100%" />
+
+
+                                        <circle cx="50%" cy="50%" r="4" fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        realisation en autodidacte
+                        <div class="">
+                            <a href="http://">
+                                <img src="" alt="" srcset="">
+                            </a>
+                            <a href="http://">
+                                <img src="" alt="" srcset="">
+                            </a>
+                            <a href="http://">
+                                <img src="" alt="" srcset="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <p class="text-center">
+                        lien vers git
+                    </p>
+                </div>
+            </details>
+
+            <hr>
+            <details>
+                <summary> projet Suivi Séance Java</summary>
+
+
+
+            </details>
+
+            <article class="container shadow-box">
+
+                <h2>Projet Suivi Séance </h2>
+
+                <div class="row">
+
+                    <div class="col-sm-8 p-4">
+                        <h3 class="text-align">Résumé de l'expression des besoins</h3>
+                        <div class="p-4 m-2">
+                            <p>Le client est le coordinateur d’un centre de formation, il veut automatiser une tache que
+                                les
+                                formateurs effectuent après chaque séance.
                             </p>
-                            <p title="bonne pratique Web">Opquast les bonnes pratiques du numérique</p>
+                            <p>Les formateurs doivent remplir une fiche de suivi papier afin de retracer les différentes
+                                compétences aborder à chaque séance.
+                            </p>
+                            <p title="Sprint backlog">
+                                Différents échanges avec le client, on permit d'établir un backlog produit
+                            </p>
+                            <p title="Sprint">
+                                Après diffèrent itération successive j'ai atteins les objectifs avant la deadline, j'ai
+                                profité de ce temps supplémentaire pour réévaluer les besoins du client.
+                            </p>
+                            <p title="collaboration avec les clients plutôt qu'à la négociation contractuelle">
+                                Il est apparu lors de cette réévaluation que le responsable de formation doit saisir
+                                l'information de la fiche de suivi dans un tableau Excel, j'ai donc proposé une
+                                fonctionnalise d'import-export des données.
+                            </p>
                         </div>
                     </div>
 
+                    <div class="col-sm-4 table-responsive">
+                        <!-- <h6 class="text-center">Langage, framework et base de donnée utlisé pour le projet</h6> -->
+                        <table class="w-50 table text-center table align-middle ">
+                            <thead>
+                                <tr>
+                                    <th>Language</th>
+                                    <th>FrameWork</th>
+                                    <th title="SGBD | Système de Gestion de Base de Données">Base de données</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="">
+                                        <p class="java"></p>
+                                    </td>
+                                    <td class="">
+                                        <img class="pt-4" src="public/img/framework/spring-logo.svg" title="Spring boot"
+                                            alt="Spring boot" style="width:10rem;">
+                                    </td>
 
-                </div>
-            </div>
+                                    <td>
+                                        <img class="pt-4" src="public/img/tools/h2-logo-2.png" alt="H2" title="SGBD"
+                                            style="width: 5rem;">
 
-        </div>
-    </section>
+                                    </td>
+                                </tr>
 
-    <!-- ---------------------------------------------------------------------------------------------------->
-    <!------------------------------------------- Réalisation ----------------------------------------------->
-    <!-- ---------------------------------------------------------------------------------------------------->
+                                <tr>
+                                    <td class="">
+                                        <p class="html"></p>
+                                        <p class="css"></p>
+                                        <p class="js"></p>
+                                    </td>
+                                    <td class="">
+                                        <img class="pt-5" src="public/img/tools/thymeleaf.png" alt="Thymeleaf"
+                                            title="moteur de template" style="width: 3rem;">
+                                        <p>
+                                            Thymeleaf
+                                        </p>
 
-    <section class="reveal container-fluid p-4 observ" id="realisation">
+                                    </td>
 
-        <div class="reveal-1">
-            <h2 class="title-section">Réalisation</h2>
-        </div>
-
-        <p class="text-center"> Partie en cours de développement </p>
-        <!-- <div class="html"></div>
-        <div class="css"></div>
-        <div class="js"></div>
-        <div class="php"></div>
-        <div class="java"></div>
-        <div class="sql"></div> -->
-        <details>
-            <summary>Details</summary>
-
-            <div class="row">
-                <div class="col">
-                    Réalisation en formation
-                    <div class="row">
-
-                        <div class="col" style="width: 33%;">
-                            <a href="http://">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                    <rect x="0" y="0" width="100%" height="100%" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class="col" style="width: 33%;">
-                            <a href="http://">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                    <rect x="0" y="0" width="100%" height="100%" stroke="red" stroke-width="5" rx="5"
-                                        ry="5" />
-                                </svg>
-
-                            </a>
-                        </div>
-
-                        <div class="col" style="width: 33%;">
-                            <a href="http://">
-                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-                                    <rect x="0" y="0" width="100%" height="100%" />
+                                    <td></td>
+                                </tr>
 
 
-                                    <circle cx="50%" cy="50%" r="4" fill="white" />
-                                </svg>
-                            </a>
-                        </div>
+                            </tbody>
+                        </table>
 
                     </div>
                 </div>
-                <div class="col">
-                    realisation en autodidacte
-                    <div class="">
-                        <a href="http://">
-                            <img src="" alt="" srcset="">
-                        </a>
-                        <a href="http://">
-                            <img src="" alt="" srcset="">
-                        </a>
-                        <a href="http://">
-                            <img src="" alt="" srcset="">
-                        </a>
+
+
+                <div class="row align-items-center m-auto">
+
+                    <div class="px-4 col-sm-4">
+                        <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/ficheSuivi.jpg"
+                            data-caption="<b>Fiche suivi séance </b> <br/> Projet suivi séance.">
+                            <img class="w-75" src="public/img/realisation/ficheSuivi.jpg"></a>
+                        <figcaption class="">Analyse de la fiche de suivi des séances.</figcaption>
+                    </div>
+
+                    <div class="px-4 col-sm-4">
+                        <a class="m-2" data-fancybox="real-ssg"
+                            data-src="public/img/realisation/UseCaseSuivieSeance.jpg"
+                            data-caption="<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance.">
+                            <img class="w-75" src="public/img/realisation/UseCaseSuivieSeance.jpg"></a>
+                        <figcaption class="">Use case de l'ensemble du projet.</figcaption>
+                    </div>
+
+                    <div class="px-4 col-sm-4">
+                        <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/localdb.png"
+                            data-caption="<b>Diagrammes entité-association</b> <br/> Projet suivi séance.">
+                            <img class="w-75" src="public/img/realisation/localdb.png"></a>
+                        <figcaption class="">Diagrammes représentant les tables du projet.</figcaption>
                     </div>
 
                 </div>
-            </div>
-            <hr>
-            <div class="row">
-                <p class="text-center">
-                    lien vers git
-                </p>
-            </div>
-        </details>
 
-        <hr>
-        <details>
-            <summary> projet Suivi Séance Java</summary>
+
+            </article>
+        </section>
+    </main>
 
 
 
-        </details>
 
-        <article class="container  shadow-box">
-
-            <h2>Projet Suivi Séance </h2>
-
-            <div class="row">
-
-                <div class="col-8 p-4">
-                    <h3 class="text-align">Résumé expression des besoins</h3>
-                    <div class="p-4 m-2">
-                        <p>Le client est un coordinateur d’un centre de formation, il veut automatiser une tache que les
-                            formateurs effectuent après chaque séance.
-                        </p>
-                        <p>Les formateurs doivent remplir une fiche de suivi papier afin de retracer les différentes
-                            compétences aborder à chaque séance.
-                        </p>
-                        <p title="Sprint backlog">
-                            Différents échanges avec le client, on permit d'établir un backlog produit
-                        </p>
-                        <p title="Sprint">
-                            Après diffèrent itération successive j'ai atteins les objectifs avant la deadline, j'ai
-                            profité de ce temps supplémentaire pour réévaluer les besoins du client.
-                        </p>
-                        <p title="collaboration avec les clients plutôt qu'à la négociation contractuelle">
-                            Il est apparu lors de cette réévaluation que le responsable de formation doit saisir
-                            l'information de la fiche de suivi dans un tableau Excel, j'ai donc proposé une
-                            fonctionnalise d'import-export des données.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <h6 class="text-center">Langage, framework et base de donnée utlisé pour le projet</h6>
-                    <table class="w-50 table text-center">
-                        <thead>
-                            <tr>
-                                <th>Language</th>
-                                <th>FrameWork</th>
-                                <th title="SGBD | Système de Gestion de Base de Données">Base de données</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="">
-                                    <p class="html"></p>
-                                    <p class="css"></p>
-                                    <p class="js"></p>
-                                </td>
-                                <td class="">
-                                    <img class="" src="public/img/tools/thymeleaf.png" alt="Thymeleaf"
-                                        title="moteur de template" style="width: 3rem;">
-                                    <p>
-                                        Thymeleaf
-                                    </p>
-
-                                </td>
-                                <td>
-                                    <img class="" src="public/img/tools/h2-logo-2.png" alt="H2" title="SGBD"
-                                        style="width: 5rem;">
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="">
-                                    <p class="java"></p>
-                                </td>
-                                <td class="">
-                                    <img class="pt-4" src="public/img/framework/spring-logo.svg"
-                                        title="Spring boot" alt="Spring boot" style="width:10rem;">
-                                </td>
-                                <td></td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-
-
-            <div class="row align-items-center m-auto">
-
-                <div class="px-4 col-sm-4">
-                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/ficheSuivi.jpg"
-                        data-caption="<b>Fiche suivi séance </b> <br/> Projet suivi séance.">
-                        <img class="w-75" src="public/img/realisation/ficheSuivi.jpg"></a>
-                    <figcaption class="">Analyse de la fiche de suivi des séances.</figcaption>
-                </div>
-
-                <div class="px-4 col-sm-4">
-                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/UseCaseSuivieSeance.jpg"
-                        data-caption="<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance.">
-                        <img class="w-75" src="public/img/realisation/UseCaseSuivieSeance.jpg"></a>
-                    <figcaption class="">Use case de l'ensemble du projet.</figcaption>
-                </div>
-
-                <div class="px-4 col-sm-4">
-                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/localdb.png"
-                        data-caption="<b>Diagrammes entité-association</b> <br/> Projet suivi séance.">
-                        <img class="w-75" src="public/img/realisation/localdb.png"></a>
-                    <figcaption class="">Diagrammes représentant les tables du projet.</figcaption>
-                </div>
-
-            </div>
-
-
-        </article>
-    </section>
 
     <!-- ---------------------------------------------------------------------------------------------------->
     <!----------------------------------------------- Main -------------------------------------------------->
     <!-- ---------------------------------------------------------------------------------------------------->
 
     <hr>
-
+    <script src="../public/asset/js/appRealisation.js"></script>
 
     <script src="./public/asset/js/particles.js"></script>
     <script src="./public/asset/js/app.js"></script>

@@ -12,6 +12,10 @@ const idSectionTools = document.querySelector("#tools")
 const idSectionUml = document.querySelector("#uml")
 
 
+const idFormationDw = document.querySelector('#formationDw');
+const idFormationCda = document.querySelector('#formationCda');
+
+
 // version each DOM 
 
 // const idSectionRealisationLang = document.querySelector(".langFront")
@@ -24,9 +28,6 @@ const idSectionUml = document.querySelector("#uml")
 // individual element part, 
 // add the class name then add the variable in an array or create a new array 
 
-const idFormationDw = document.querySelector('#formationDw');
-const idFormationCda = document.querySelector('#formationCda');
-
 const html = document.querySelectorAll('.html');
 const css = document.querySelectorAll('.css');
 const js = document.querySelectorAll('.js');
@@ -34,11 +35,20 @@ const php = document.querySelectorAll('.php');
 const java = document.querySelectorAll('.java');
 const sql = document.querySelectorAll('.sql');
 
-
-
 const arrayNameClass = ['html', 'css', 'js', 'php', 'java', 'sql'];
 const arrayNodeListLangF = [html, css, js];
 const arrayNodeListLangB = [php, java, sql];
+
+
+
+const arrayLang = [];
+const arrayFrame = [];
+const arrayAnalyse = [];
+const arrayMobil = [];
+const arrayCms = [];
+const arrayTools = [];
+
+const showProgress = document.querySelectorAll("[class*='showProgress-']")
 
 const myHeaders = new Headers();
 const myInit = {
@@ -51,8 +61,6 @@ const myInit = {
 };
 
 
-// const arrayData = new Array
-
 async function fetchJson(url) {
     try {
         let response = await fetch(url, myInit)
@@ -64,15 +72,6 @@ async function fetchJson(url) {
 
             // console.log(datas);
 
-            // let skills = datas.skills
-            // let langData = skills[0].language
-
-            // let formation = datas.formation
-
-            // console.log(langData);
-            // arrayData.push(skills, formation)
-
-
             return datas
 
         } else {
@@ -83,20 +82,10 @@ async function fetchJson(url) {
     }
 
 }
-// fetchJson("public/asset/js/datas.json");
 
 
-const arrayLang = [];
-const arrayFrame = [];
-const arrayAnalyse = [];
-const arrayMobil = [];
-const arrayCms = [];
-const arrayTools = [];
-function eachByKey() {
+function eachDataForPush() {
     fetchJson("public/asset/js/datas.json").then((datas) => {
-
-        // console.log(datas.skills[0].language);
-        // console.log( datas.skills);
 
         for (const allSkills of datas.skills) {
 
@@ -135,47 +124,20 @@ function eachByKey() {
             });
 
         }
-        // console.log(datas.formation);
 
-        // console.log("datas.formation");
-        // console.log(datas.formation);
         // ----------- Formation
 
         let formationArr = datas.formation;
 
         let formationDw = formationArr.dwwm;
         let formationCda = formationArr.cda;
-        eachData(formationDw, idFormationDw, viewFormation)
-        eachData(formationCda, idFormationCda, viewFormation)
+        // eachData(formationDw, idFormationDw, viewFormation)
+        // eachData(formationCda, idFormationCda, viewFormation)
 
         //----- add class -> show card -----
     })
 }
-// datas.skills[0]
-// datas.formation
-eachByKey()
 
-
-
-
-
-const showProgress = document.querySelectorAll("[class*='showProgress-']")
-
-showProgress.forEach(btnProgress => {
-    btnProgress.addEventListener('click', function () {
-
-        let isFront = btnProgress.classList.contains('showProgress-front')
-
-
-        if (btnProgress.checked) {
-            functionRunder = viewCardProgress
-        } else {
-            functionRunder = viewCard
-        }
-
-        eachFramLang(arrayLang, isFront, true, functionRunder)
-    })
-});
 
 /**
  * 
@@ -207,7 +169,7 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
 
 /**
  * Each data fetch become a inner on Dom element
- * @param {any} allSkills 
+ * @param {array} allSkills 
  * @param {string} elm 
  * @param {Function} callback 
  */
@@ -293,7 +255,7 @@ function viewCard(data, size = null) {
             <div style="" class="" title="${data.name}">
                 <div class="box-svg">  
                     
-                    <img class="w-27" src="${data.image}" alt="image" style="width: ${size};">
+                    <img class="w-75" src="${data.image}" alt="image" style="width: ${size};">
                 </div>
             </div>
             <div class="title-competence">
@@ -334,7 +296,7 @@ function viewList(data) {
 // console.log(arrayTools);
 
 // console.log(arrayAnalyse);
-console.log(arrayLang);
+// console.log(arrayLang);
 
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée');
@@ -357,11 +319,21 @@ window.addEventListener('load', () => {
 
 })
 
-// eachFramLang(arrayLang, true, true, viewCard)
+showProgress.forEach(btnProgress => {
+    btnProgress.addEventListener('click', function () {
 
-// eachFramLang(arrayLang, false, true, viewCard)
+        let isFront = btnProgress.classList.contains('showProgress-front')
 
-// eachFramLang(arrayFrame, true, false, viewCard)
-// eachFramLang(arrayFrame, false, false, viewCard)
 
-// eachData(arrayMobil[0], idSectionMobil);
+        if (btnProgress.checked) {
+            functionRunder = viewCardProgress
+        } else {
+            functionRunder = viewCard
+        }
+
+        eachFramLang(arrayLang, isFront, true, functionRunder)
+    })
+});
+
+
+eachDataForPush()

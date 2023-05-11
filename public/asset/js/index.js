@@ -35,7 +35,7 @@ function selected(nodeList, className) {
     nodeList.forEach(element => {
 
         element.addEventListener("click", () => {
-  
+
             nodeList.forEach(el => {
 
                 if (el.classList.contains(className)) {
@@ -59,6 +59,13 @@ function reportWindowSize() {
     let pc = window.innerWidth >= 1250;
     let tab = (window.innerWidth >= 992) && (window.innerWidth < 1250);
 
+    let strLinkSvg = `<a data-fancybox data-type="pdf" class="nav-link" href="public/doc/cv.pdf">Mon CV
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                        </svg>
+                    </a>`
+
     if (pc) {
 
         return responsive.innerHTML = `<a target="_blank" class="nav-link" href="public/doc/cv.pdf">Mon CV</a>`;
@@ -67,21 +74,11 @@ function reportWindowSize() {
 
         // console.log("Phone Size : " + window.innerWidth);
 
-        return responsive.innerHTML = `<a data-fancybox data-type="pdf" class="nav-link" href="public/doc/cv.pdf">Mon CV
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-                                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-                                    </svg>
-                                </a>`;
+        return responsive.innerHTML = strLinkSvg;
     } if (tab) {
 
         // 992
-        return responsive.innerHTML = `<a data-fancybox data-type="pdf" class="nav-link" href="public/doc/cv.pdf">Mon CV
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-                                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-                                    </svg>
-                                </a>`;
+        return responsive.innerHTML = strLinkSvg;
     }
 }
 
@@ -100,18 +97,19 @@ function reveal() {
         entries.forEach(function (entry) {
             if (entry.intersectionRatio > ratio) {
 
-                entry.target.classList.remove('reveal') 
+                entry.target.classList.remove('reveal')
 
                 observer.unobserve(entry.target)
             }
+
         })
-   
+
 
     }
 
     const observer = new IntersectionObserver(handleIntersect, options);
     document.querySelectorAll('.reveal').forEach(function (r) {
-   
+
         observer.observe(r) // r comme reveal
     })
 
@@ -132,48 +130,48 @@ display.forEach((e) => {
 
 
 
-const ariaCurrent = document.querySelectorAll("a[aria-current]")
+// const ariaCurrent = document.querySelectorAll("a[aria-current]")
 
-function obervMenu() {
+// function obervMenu() {
 
-    ratio = .5
-    options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: ratio
-    }
-
-
-    const callback = function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
+//     ratio = .5
+//     options = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: ratio
+//     }
 
 
-                ariaCurrent.forEach(el => {
-                    
-                    if (entry.target.id == el.ariaCurrent) {
-                        el.classList.add('currentSelec')
-                    }else{
-                        el.classList.remove('currentSelec') 
+//     const callback = function (entries, observer) {
+//         entries.forEach(function (entry) {
+//             if (entry.isIntersecting) {
 
-                    }
-    
-                })
 
-            }
-        })
-        
+//                 ariaCurrent.forEach(el => {
 
-    }
+//                     if (entry.target.id == el.ariaCurrent) {
+//                         el.classList.add('currentSelec')
+//                     }else{
+//                         el.classList.remove('currentSelec') 
 
-    const observer = new IntersectionObserver(callback, options);
-    document.querySelectorAll('.observ').forEach(function (r) {
-        // console.log(r);
-        observer.observe(r)
-    })
+//                     }
 
-}
-obervMenu()
+//                 })
+
+//             }
+//         })
+
+
+//     }
+
+//     const observer = new IntersectionObserver(callback, options);
+//     document.querySelectorAll('.observ').forEach(function (r) {
+//         // console.log(r);
+//         observer.observe(r)
+//     })
+
+// }
+// obervMenu()
 
 
 // chaque élément de entries correspond à une variation
