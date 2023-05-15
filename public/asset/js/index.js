@@ -224,39 +224,88 @@ function addElmt(elmIdParent, noeudCre, classNameParam, newContent) {
 //------------------------------------------------------
 //------------------------------------------------------
 
+const myHeaders = new Headers();
+const myInit = {
+    method: 'GET',
+    headers: myHeaders,
+    mode: 'cors',
+    // mode: 'no-cors',
+    cache: 'default',
 
-// function sidebar() {
-//     let sidebarOpened = false;
-//     let btnMenu = document.getElementById('logo-menu');
-//     let sidebar = document.getElementById('sidebar');
-//     let logoMenu = document.getElementById('logo-menu-div');
-
-//     btnMenu.addEventListener('click', function (e) {
-
-//         sidebar.classList.add('tran-sidebar')
-//         //logoMenu.style.visibility = 'hidden';
-//         logoMenu.style.display = 'none';
-//         sidebarOpened = true;
-
-//         e.stopPropagation();
-//         e.preventDefault();
-
-//     })
-
-//     //var doClick = document.querySelectorAll('[doClick]');
-
-//     document.body.addEventListener('click', function (e) {
-
-//         if (sidebarOpened) {
-//             sidebar.classList.remove('tran-sidebar');
-//             logoMenu.style.display = 'block';
-//             //logoMenu.style.visibility = 'visible';
-//         }
-
-//     })
-
-// } sidebar();
+};
 
 
+async function fetchJson(url) {
+    try {
+        let response = await fetch(url, myInit)
+        // console.log(`try : Reponse : ${response.status} ${response.statusText} `)
+        // console.log(response);
+        if (response.ok) {
+
+            let datas = await response.json();
+
+            // console.log(datas);
+
+            return datas
+
+        } else {
+            console.log(`pas Ok : Invalid Response `);
+        }
+    } catch ($e) {
+        console.log("Catch : ERROR " + $e)
+    }
+
+}
+
+
+// 
+function cookieAddEvent() {
+    let cookieTest = document.querySelector('#cookieTest')
+    cookieTest.addEventListener('auxclick', function (event) {
+        if (event.button == 1) {
+            console.log('bouton du millieu');
+        }
+
+        addCookie("Suivi Séance")
+    })
+}
+
+
+cookieAddEvent();
+// let value = "Suivi Séance"
+// let clef = "realisation"
+function addCookie(value) {
+
+    let date = new Date(Date.now() + 60000);
+    date = date.toUTCString()
+
+    document.cookie = `${clef}=${value};path=/;expires=${date};SameSite=lax;Secure`
+
+    console.log(document.cookie);
+}
+
+// Valeur de la clef cookie vide pour reboot cookie
+// document.cookie = `user=bob;path=/;expires=${date};samesite=lax;`
+
+function showCookies() {
+    const output = document.getElementById("cookies");
+
+    output.textContent = `> ${document.cookie}`;
+
+    const cookieValue = document.cookie
+        .split(";")
+        .find((row) => row.startsWith(`${clef}=`))
+        ?.split("=")[1];
+
+    console.log(cookieValue);
+}
+
+function clearOutputCookies() {
+    const output = document.getElementById("cookies");
+    output.textContent = "";
+    console.log(document.cookie);
+    // console.log(cookieValue);
+
+}
 
 

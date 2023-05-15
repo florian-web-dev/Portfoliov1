@@ -14,7 +14,7 @@
                         "slug": "html",
                         "name": "HyperText Markup Language",
                         "value": 90,
-                        "image": "public/img/language/HTML5_logo.svg"
+                        "image": "public/img/language/html5_logo.svg"
                     },
                     {
                         "id": 2,
@@ -22,7 +22,7 @@
                         "slug": "css",
                         "name": "Cascading Style Sheets",
                         "value": 80,
-                        "image": "public/img/language/CSS3_logo.svg"
+                        "image": "public/img/language/css3_logo.svg"
                     },
                     {
                         "id": 3,
@@ -30,7 +30,7 @@
                         "slug": "js",
                         "name": "JavaScript",
                         "value": 70,
-                        "image": "public/img/language/JavaScript_logo.svg"
+                        "image": "public/img/language/javascript_logo.svg"
                     }
                 ],
                 "backend": [
@@ -40,7 +40,7 @@
                         "slug": "php",
                         "name": "Hypertext Preprocessor",
                         "value": 80,
-                        "image": "public/img/language/PHP_logo.svg"
+                        "image": "public/img/language/php_logo.svg"
                     },
                     {
                         "id": 5,
@@ -48,7 +48,7 @@
                         "slug": "java",
                         "name": "Java",
                         "value": 70,
-                        "image": "public/img/language/Java_logo.svg"
+                        "image": "public/img/language/java_logo.svg"
                     },
                     {
                         "id": 6,
@@ -56,7 +56,7 @@
                         "slug": "sql",
                         "name": "Structured Query Language",
                         "value": 60,
-                        "image": "public/img/language/SQL_logo.svg"
+                        "image": "public/img/language/sql_logo.svg"
                     }
                 ]
             },
@@ -107,14 +107,14 @@
                     "title": "Android java",
                     "name": "Android java",
                     "value": 50,
-                    "image": "public/img/framework/Android_logo.svg"
+                    "image": "public/img/framework/android_logo.svg"
                 },
                 {
                     "id": 2,
                     "title": "",
                     "name": "Ionic",
                     "value": 40,
-                    "image": "public/img/framework/Ionic_logo.svg"
+                    "image": "public/img/framework/ionic_logo.svg"
                 }
             ],
             "analyse": [
@@ -196,5 +196,59 @@
                 "lien": "https://www.banque.di.afpa.fr/EspaceEmployeursCandidatsActeurs/EGPResultat.aspx?ct=01281m03&type=t"
             }
         ]
-    }
+    },
+    "realisation": [
+        {
+            "id": 1,
+            "name": "Suivi Séance",
+            "language": [
+                {
+                    "id": 1,
+                    "name": ""
+                }
+            ],
+            "frameWork": [
+                {
+                    "id": 1,
+                    "name": ""
+                }
+            ],
+            "bataBase": "",
+            "content": "",
+            "linkGit": "",
+            "analyse": [
+                {
+                    "id": 1,
+                    "diagrammeName": "",
+                    "analyseUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "E-commerce",
+            "language": [
+                {
+                    "id": 1,
+                    "name": ""
+                }
+            ],
+            "frameWork": [
+                {
+                    "id": 1,
+                    "name": ""
+                }
+            ],
+            "bataBase": "",
+            "content": "",
+            "linkGit": "",
+            "analyse": [
+                {
+                    "id": 1,
+                    "diagrammeName": "",
+                    "analyseUrl": ""
+                }
+            ]
+        }
+    ]
 }

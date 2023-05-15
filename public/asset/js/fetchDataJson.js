@@ -50,38 +50,38 @@ const arrayTools = [];
 
 const showProgress = document.querySelectorAll("[class*='showProgress-']")
 
-const myHeaders = new Headers();
-const myInit = {
-    method: 'GET',
-    headers: myHeaders,
-    mode: 'cors',
-    // mode: 'no-cors',
-    cache: 'default',
+// const myHeaders = new Headers();
+// const myInit = {
+//     method: 'GET',
+//     headers: myHeaders,
+//     mode: 'cors',
+//     // mode: 'no-cors',
+//     cache: 'default',
 
-};
+// };
 
 
-async function fetchJson(url) {
-    try {
-        let response = await fetch(url, myInit)
-        // console.log(`try : Reponse : ${response.status} ${response.statusText} `)
-        // console.log(response);
-        if (response.ok) {
+// async function fetchJson(url) {
+//     try {
+//         let response = await fetch(url, myInit)
+//         // console.log(`try : Reponse : ${response.status} ${response.statusText} `)
+//         // console.log(response);
+//         if (response.ok) {
 
-            let datas = await response.json();
+//             let datas = await response.json();
 
-            // console.log(datas);
+//             // console.log(datas);
 
-            return datas
+//             return datas
 
-        } else {
-            console.log(`pas Ok : Invalid Response `);
-        }
-    } catch ($e) {
-        console.log("Catch : ERROR " + $e)
-    }
+//         } else {
+//             console.log(`pas Ok : Invalid Response `);
+//         }
+//     } catch ($e) {
+//         console.log("Catch : ERROR " + $e)
+//     }
 
-}
+// }
 
 
 function eachDataForPush() {
