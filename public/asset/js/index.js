@@ -261,19 +261,24 @@ async function fetchJson(url) {
 // 
 function cookieAddEvent() {
     let cookieTest = document.querySelector('#cookieTest')
-    cookieTest.addEventListener('auxclick', function (event) {
-        if (event.button == 1) {
-            console.log('bouton du millieu');
-        }
+    if (undefined == cookieTest) {
+        console.log('#cookieTest n\'est pas sur la page ou js!=js');
+    } else {
+        cookieTest.addEventListener('auxclick', function (event) {
+            if (event.button == 1) {
+                console.log('bouton du millieu');
+            }
 
-        addCookie("Suivi Séance")
-    })
+            addCookie("Suivi Séance")
+        })
+    }
+
 }
 
 
 cookieAddEvent();
 // let value = "Suivi Séance"
-// let clef = "realisation"
+let clef = "realisation"
 function addCookie(value) {
 
     let date = new Date(Date.now() + 60000);
