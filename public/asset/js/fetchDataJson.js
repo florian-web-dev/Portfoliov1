@@ -47,8 +47,14 @@ const arrayAnalyse = [];
 const arrayMobil = [];
 const arrayCms = [];
 const arrayTools = [];
+const arrayAchiev = [];
 
 const showProgress = document.querySelectorAll("[class*='showProgress-']")
+
+
+
+const achievementShow = document.querySelector('#achievementShow');
+
 
 // const myHeaders = new Headers();
 // const myInit = {
@@ -89,43 +95,49 @@ function eachDataForPush() {
 
         for (const allSkills of datas.skills) {
 
+            // ---------------------------------------
+            // ---------------- skills ---------------
+            // ---------------------------------------
+            //--------- language --------- //
             let skillLang = allSkills.language;
             arrayLang.push(skillLang)
-
-            let skillFrameWork = allSkills.framework;
-            arrayFrame.push(skillFrameWork)
-
-            let skillsAnalyse = allSkills.analyse;
-            arrayAnalyse.push(skillsAnalyse)
-
-            let skillsMobil = allSkills.mobil;
-            arrayMobil.push(skillsMobil)
-
-            let skillsCms = allSkills.cms;
-            arrayCms.push(skillsCms)
-
-            let skillTools = allSkills.tools
-            arrayTools.push(skillTools);
-
-            // // ----------- Skill Language Frontend
+            // ----------- Skill Language Frontend
             let dataLangFront = skillLang.frontend;
 
-            // // ----------- Skill Language Backend
+            // ----------- Skill Language Backend
             let dataLangBack = skillLang.backend;
 
-
-            // console.log(dataLangFront);
-            // console.log(arrayNameClass);
-            // console.log(arrayNodeListLangF);
-            //----- add class -> show card -----
+            //----- add class array node -> show card -----
             arrayNameClass.forEach(nodeElmName => {
                 eachClassName(dataLangFront, nodeElmName, arrayNodeListLangF);
                 eachClassName(dataLangBack, nodeElmName, arrayNodeListLangB);
             });
 
+            //--------- framework --------- //
+            let skillFrameWork = allSkills.framework;
+            arrayFrame.push(skillFrameWork)
+
+            //--------- analyse --------- //
+            let skillsAnalyse = allSkills.analyse;
+            arrayAnalyse.push(skillsAnalyse)
+
+            //--------- analyse --------- //
+            let skillsMobil = allSkills.mobil;
+            arrayMobil.push(skillsMobil)
+
+            //--------- cms --------- //
+            let skillsCms = allSkills.cms;
+            arrayCms.push(skillsCms)
+
+            //--------- tools --------- //
+            let skillTools = allSkills.tools
+            arrayTools.push(skillTools);
+
         }
 
-        // ----------- Formation
+        // ---------------------------------------
+        // ---------------- formation ------------
+        // ---------------------------------------
 
         let formationArr = datas.formation;
 
@@ -134,7 +146,12 @@ function eachDataForPush() {
         // eachData(formationDw, idFormationDw, viewFormation)
         // eachData(formationCda, idFormationCda, viewFormation)
 
-        //----- add class -> show card -----
+
+        // ---------------------------------------
+        // ---------------- realisation ------------
+        // ---------------------------------------
+        let achievement = datas.realisation;
+        arrayAchiev.push(achievement);
     })
 }
 
@@ -191,7 +208,7 @@ function eachData(allSkills, elm, callback = viewCard) {
  * @param {Array} arrayNodeList is list to nodeList
  * @param {node} node Element
  */
-function eachClassName(dataObj, className, arrayNodeList = null, elm = null, ) {
+function eachClassName(dataObj, className, arrayNodeList = null, elm = null,) {
 
     let chaine = "";
     for (let obj of dataObj) {
@@ -276,7 +293,7 @@ function viewFormation(data) {
 
 function viewLanguageLogo(data, size = null, className = null) {
     return `
-        <img class="className" src="${data.image}" alt="${data.name}" title="${data.name}" style="width: ${size};"></img>
+        <img class="${className}" src="${data.image}" alt="${data.name}" title="${data.name}" style="width: ${size};"></img>
     `
 }
 
@@ -286,20 +303,33 @@ function viewList(data) {
         <li class="list-group-item">${data.name}</li>
     `
 }
+
+
+
+function viewAchiev(data) {
+    return `
+    <div class="card-achiev m-3 rounded">
+        <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100" />
+        <div class="fadedbox">
+
+            <h5 class="title-fade">${data.title}</h5>
+            <div class="card-body-achiev">
+                <p title="Concepteur Développeur Application">${data.subtitle}</p>
+                <a href="./pages/realisation.html" onauxclick="addCookie('${data.title}')" onclick="addCookie('${data.title}')"
+                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir</a>
+            </div>
+
+        </div>
+    </div>
+`
+}
 // console.log(arrayLang);
-// console.log(arrayFrame);
 
-// console.log(arrayAnalyse.tools);
-// console.log(arrayMobil);
-// console.log(arrayCms);
-
-// console.log(arrayTools);
-
-// console.log(arrayAnalyse);
-// console.log(arrayLang);
+// console.log(arrayAchiev);
 
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée');
+
     eachFramLang(arrayLang, true, true, viewCard)
 
     eachFramLang(arrayLang, false, true, viewCard)
@@ -316,8 +346,9 @@ window.addEventListener('load', () => {
 
     eachData(arrayAnalyse[0], idSectionUml, viewList);
 
-
+    eachData(arrayAchiev[0], achievementShow, viewAchiev);
 })
+
 
 showProgress.forEach(btnProgress => {
     btnProgress.addEventListener('click', function () {
@@ -335,5 +366,5 @@ showProgress.forEach(btnProgress => {
     })
 });
 
-
 eachDataForPush()
+

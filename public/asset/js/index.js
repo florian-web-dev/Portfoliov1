@@ -259,37 +259,44 @@ async function fetchJson(url) {
 
 
 // 
-function cookieAddEvent() {
-    let cookieTest = document.querySelector('#cookieTest')
-    if (undefined == cookieTest) {
-        console.log('#cookieTest n\'est pas sur la page ou js!=js');
-    } else {
-        cookieTest.addEventListener('auxclick', function (event) {
-            if (event.button == 1) {
-                console.log('bouton du millieu');
-            }
-
-            addCookie("Suivi Séance")
-        })
-    }
-
-}
+// function cookieAddEvent() {
 
 
-cookieAddEvent();
+
+//     if (undefined == cookieTest) {
+//         console.log('#cookieTest n\'est pas sur la page ou js!=js');
+//     } else {
+//         cookieTest.addEventListener('auxclick', function (event) {
+//             if (event.button == 1) {
+//                 console.log('bouton du millieu');
+//             }
+
+//             addCookie("Suivi Séance")
+//         })
+//     }
+
+// }
+
+
+// cookieAddEvent();
 // let value = "Suivi Séance"
 let clef = "realisation"
 function addCookie(value) {
-
-    let date = new Date(Date.now() + 60000);
+    
+    // let date = new Date(Date.now() + 60000);
+    let date = new Date(Date.now() + 6000000000);
     date = date.toUTCString()
 
     document.cookie = `${clef}=${value};path=/;expires=${date};SameSite=lax;Secure`
 
     console.log(document.cookie);
+
 }
 
-// Valeur de la clef cookie vide pour reboot cookie
+
+
+
+
 // document.cookie = `user=bob;path=/;expires=${date};samesite=lax;`
 
 function showCookies() {

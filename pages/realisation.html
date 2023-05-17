@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="../public/asset/css/header.css" type="text/CSS">
     <link rel="stylesheet" href="../public/asset/css/style.css" type="text/CSS">
+    <link rel="stylesheet" href="../public/asset/css/realizStyle.css" type="text/CSS">
 
     <!-- <link rel="stylesheet" href="content/css/stylemodal.css" type="text/CSS"> -->
 
@@ -92,19 +93,35 @@
     <div>
         <code id="cookies"></code>
     </div>
+    <hr>
 
+    <section class="section-btn-realize">
+        <div class="">
+            <button onclick="addCookie('Suivi Séance')">Suivi Séance</button>
+            <button onclick="addCookie('Food easy home')">Food easy home</button>
+            <button onclick="addCookie('Mini projet')">Mini projet</button>
+
+        </div>
+
+        <div class="">
+            <button onclick="addCookie('Projet Api rest full')">Projet Api rest full</button>
+            <button onclick="addCookie('Blog laravel')">Blog laravel</button>
+            <button onclick="addCookie('E-commerce laravel')">E-commerce laravel</button>
+        </div>
+    </section>
+    
 
     <section>
-        <article class="container  shadow-box">
+        <article class="container p-4 shadow-box">
 
-            <h2>Projet Suivi Séance </h2>
+            <h2 class="title-section">Projet Suivi Séance </h2>
 
             <div class="row">
 
-                <div class="col-8 p-4">
+                <div class="col-lg-8 col-md-9 col-sm-10 p-4">
                     <h3 class="text-align">Résumé expression des besoins</h3>
-                    <div class="p-4 m-2">
-                        <p>Le client est le coordinateur d’un centre de formation, il veut automatiser une tache que les
+                    <div class="p-4 m-2" id="text-content-realiz">
+                        <!-- <p>Le client est le coordinateur d’un centre de formation, il veut automatiser une tache que les
                             formateurs effectuent après chaque séance.
                         </p>
                         <p>Les formateurs doivent remplir une fiche de suivi papier afin de retracer les différentes
@@ -121,85 +138,97 @@
                             Il est apparu lors de cette réévaluation que le responsable de formation doit saisir
                             l'information de la fiche de suivi dans un tableau Excel, j'ai donc proposé une
                             fonctionnalise d'import-export des données.
-                        </p>
+                        </p> -->
                     </div>
-                </div>
 
-                <div class="col-4">
-                    <h6 class="text-center">Langage, framework et base de donnée utlisé pour le projet</h6>
-                    <table class="w-50 table text-center">
+
+                    <div>
+
+                    </div>
+                    <table class="text-center table-style">
                         <thead>
+                            <tr>
+                                <th colspan="3" class="text-center m-3 p-3">
+                                    Spécifications techniques
+                                </th>
+                            </tr>
                             <tr>
                                 <th>Language</th>
                                 <th>FrameWork</th>
-                                <th title="SGBD | Système de Gestion de Base de Données">SGBD</th>
+                                <th><abbr title="SGBD | Système de Gestion de Base de Données">SGBD</abbr> </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="">
-                                    <p class="java"></p>
+                                <td class="" id="table-td-language">
+                                    <!-- <p class="java">java</p>
+                                    <p class="html">Html</p>
+                                    <p class="css">CSS</p>
+                                    <p class="js">JS</p> -->
+                                    <!-- <img class="pt-4 m-1" src="../public/img/language/html5_logo.svg" alt="" title=""
+                                        style="width: 3rem;">
+                                    <img class="pt-4 m-1" src="../public/img/language/css3_logo.svg" alt="" title=""
+                                        style="width: 3rem;">
+                                    <img class="pt-4 m-1" src="../public/img/language/javascript_logo.svg" alt=""
+                                        title="" style="width: 3rem;">
+                                    <img class="pt-4 m-1" src="../public/img/language/java_logo.svg" alt="" title=""
+                                        style="width: 3rem;"> -->
                                 </td>
-                                <td class="">
-                                    <img class="pt-4" src="../public/img/framework/spring-logo.svg" title="Spring boot"
-                                        alt="Spring boot" style="width:10rem;">
-                                </td>
-
-                                <td>
-                                    <img class="pt-4" src="../public/img/tools/h2-logo-2.png" alt="H2" title="SGBD"
-                                        style="width: 5rem;">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="">
-                                    <p class="html"></p>
-                                    <p class="css"></p>
-                                    <p class="js"></p>
-                                </td>
-                                <td class="">
-                                    <img class="pt-5" src="../public/img/tools/thymeleaf.png" alt="Thymeleaf"
-                                        title="moteur de template" style="width: 3rem;">
-                                    <p>
-                                        Thymeleaf
-                                    </p>
+                                <td class="" id="table-td-framework">
+                                    <!-- <img class="pt-4" src="../public/img/framework/spring-logo.svg" title="Spring boot"
+                                        alt="Spring boot" style="width:10rem;"> -->
 
                                 </td>
 
-                                <td></td>
+                                <td id="table-td-sgbd">
+                                    <img class="pt-4" src="../public/img/tools/h2-logo.png" alt="H2 logo SGBD"
+                                        title="SGBD" style="width: 5rem;">
+                                </td>
                             </tr>
 
 
                         </tbody>
+
                     </table>
-
-                </div>
-            </div>
-
-
-            <div class="row align-items-center m-auto">
-
-                <div class="px-4 col-sm-4">
-                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/ficheSuivi.jpg"
-                        data-caption="<b>Fiche suivi séance </b> <br/> Projet suivi séance.">
-                        <img class="w-75" src="../public/img/realisation/ficheSuivi.jpg"></a>
-                    <figcaption class="">Analyse de la fiche de suivi des séances.</figcaption>
+                    <p>
+                        autre outil
+                    </p>
                 </div>
 
-                <div class="px-4 col-sm-4">
-                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/UseCaseSuivieSeance.jpg"
-                        data-caption="<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance.">
-                        <img class="w-75" src="../public/img/realisation/UseCaseSuivieSeance.jpg"></a>
-                    <figcaption class="">Use case de l'ensemble du projet.</figcaption>
+                <div class="col-lg-4 col-md-10 col-sm-10 m-auto" id="div-realiz-diagrame">
+                    <!-- <div class="m-2 p-3 shadow-box">
+                        <a class="" data-fancybox="real-ssg" data-src="../public/img/realisation/ficheSuivi.jpg"
+                            data-caption="<b>Fiche suivi séance </b> <br/> Projet suivi séance.">
+                            <img class="w-100" src="../public/img/realisation/ficheSuivi.jpg"></a>
+
+                        <figcaption class="text-center">Analyse de la fiche de suivi des séances.</figcaption>
+                    </div>
+
+                    <div class="m-2 p-3 shadow-box">
+                        <a class="" data-fancybox="real-ssg"
+                            data-src="../public/img/realisation/UseCaseSuivieSeance.jpg"
+                            data-caption="<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance.">
+                            <img class="w-100" src="../public/img/realisation/UseCaseSuivieSeance.jpg"></a>
+                        <figcaption class="text-center">Use case de l'ensemble du projet.</figcaption>
+                    </div>
+
+                    <div class="m-2 p-3 shadow-box">
+                        <a class="" data-fancybox="real-ssg" data-src="../public/img/realisation/localdb.png"
+                            data-caption="<b>Diagrammes entité-association</b> <br/> Projet suivi séance.">
+                            <img class="w-100" src="../public/img/realisation/localdb.png"></a>
+                        <figcaption class="text-center">Diagrammes représentant les tables du projet.</figcaption>
+                    </div> -->
                 </div>
 
-                <div class="px-4 col-sm-4">
-                    <a class="m-2" data-fancybox="real-ssg" data-src="public/img/realisation/localdb.png"
-                        data-caption="<b>Diagrammes entité-association</b> <br/> Projet suivi séance.">
-                        <img class="w-75" src="../public/img/realisation/localdb.png"></a>
-                    <figcaption class="">Diagrammes représentant les tables du projet.</figcaption>
-                </div>
 
+                <div class="row align-items-center">
+
+
+
+
+
+
+                </div>
             </div>
 
 
@@ -208,7 +237,14 @@
 
 
     <hr>
+    <hr>
+    <hr>
 
+    <section id="testReal"></section>
+
+    <hr>
+    <hr>
+    <hr>
 
     <script src="../public/asset/js/particles.js"></script>
     <script src="../public/asset/js/app.js"></script>

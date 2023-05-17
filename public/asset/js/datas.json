@@ -200,53 +200,200 @@
     "realisation": [
         {
             "id": 1,
-            "name": "Suivi Séance",
+            "title": "Suivi Séance",
+            "slug": "suivi-seance",
+            "subtitle": "Projet web Java.",
+            "context": "Concepteur Développeur Application",
+            "linkGit": "https://github.com/florian-web-dev/Contenu_seance",
+            "bataBase": "h2",
+            "templateProces": "thymeleaf",
+            "content": "Le client est le coordinateur d’un centre de formation, il veut automatiser une tache que les formateurs effectuent après chaque séance. Les formateurs doivent remplir une fiche de suivi papier afin de retracer les différentes compétences aborder à chaque séance. Différents échanges avec le client, on permit d'établir un backlog produit. Après diffèrent itération successive j'ai atteins les objectifs avant la deadline, j'ai profité de ce temps supplémentaire pour réévaluer les besoins du client. Il est apparu lors de cette réévaluation que le responsable de formation doit saisir l'information de la fiche de suivi dans un tableau Excel, j'ai donc proposé une fonctionnalise d'import-export des données.",
             "language": [
                 {
                     "id": 1,
-                    "name": ""
+                    "name": "html5"
+                },
+                {
+                    "id": 2,
+                    "name": "css3"
+                },
+                {
+                    "id": 3,
+                    "name": "javascript"
+                },
+                {
+                    "id": 4,
+                    "name": "java"
                 }
             ],
             "frameWork": [
                 {
                     "id": 1,
-                    "name": ""
+                    "name": "spring"
                 }
             ],
-            "bataBase": "",
-            "content": "",
-            "linkGit": "",
             "analyse": [
                 {
                     "id": 1,
-                    "diagrammeName": "",
-                    "analyseUrl": ""
+                    "figcaption": "Analyse de la fiche de suivi des séances.",
+                    "nameFile": "ficheSuivi.jpg",
+                    "imgUrl": "../public/img/realisation/ficheSuivi.jpg",
+                    "caption":"<b>Fiche suivi séance </b> <br/> Projet suivi séance."
+                },
+                {
+                    "id": 1,
+                    "figcaption": "Use case de l'ensemble du projet.",
+                    "nameFile": "UseCaseSuivieSeance.jpg",
+                    "imgUrl": "../public/img/realisation/UseCaseSuivieSeance.jpg",
+                    "caption":"<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance."
+                },
+                {
+                    "id": 1,
+                    "figcaption": "Diagrammes représentant les tables du projet.",
+                    "nameFile": "localdb.png",
+                    "imgUrl": "../public/img/realisation/localdb.png",
+                    "caption":"<b>Diagrammes entité-association</b> <br/> Projet suivi séance."
                 }
             ]
         },
         {
             "id": 2,
-            "name": "E-commerce",
+            "title": "Food easy home",
+            "slug": "food-easy-home",
+            "subtitle": "Projet site E-commerce, vanilla",
+            "context": "Développeur Web Web Mobil",
+            "linkGit": "https://github.com/florian-web-dev/Cont",
+            "bataBase": "MariaDB",
+            "templateProces": "",
+            "content": "Projet E-commerce avec partie back office, gestion des roles, fonctionnalité panier ",
             "language": [
                 {
                     "id": 1,
-                    "name": ""
-                }
-            ],
-            "frameWork": [
+                    "name": "html5"
+                },
                 {
-                    "id": 1,
-                    "name": ""
+                    "id": 2,
+                    "name": "css3"
+                },
+                {
+                    "id": 3,
+                    "name": "js"
+                },
+                {
+                    "id": 4,
+                    "name": "php"
+                },
+                {
+                    "id": 5,
+                    "name": "sql"
                 }
             ],
-            "bataBase": "",
-            "content": "",
-            "linkGit": "",
+            "frameWork": [],
             "analyse": [
                 {
                     "id": 1,
                     "diagrammeName": "",
-                    "analyseUrl": ""
+                    "imgUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Mini projet",
+            "slug": "mini-projet",
+            "subtitle": "Plusieurs projet Vuejs/Adroid",
+            "context": "Développeur Web Web Mobil et CDA",
+            "linkGit": "",
+            "bataBase": "",
+            "templateProces": "",
+            "content": " ",
+            "language": [
+                {
+                    "id": 1,
+                    "name": "html5"
+                }
+            ],
+            "frameWork": [],
+            "analyse": [
+                {
+                    "id": 1,
+                    "diagrammeName": "",
+                    "imgUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Projet Api rest full",
+            "slug": "projet-api",
+            "subtitle": "Api Java / Api Lavarel",
+            "context": "Autodidacte",
+            "linkGit": "",
+            "bataBase": "",
+            "templateProces": "",
+            "content": " ",
+            "language": [
+                {
+                    "id": 1,
+                    "name": "html"
+                }
+            ],
+            "frameWork": [],
+            "analyse": [
+                {
+                    "id": 1,
+                    "diagrammeName": "",
+                    "imgUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Blog laravel",
+            "slug": "blog-laravel",
+            "subtitle": "laravel",
+            "context": "Autodidacte",
+            "linkGit": "",
+            "bataBase": "",
+            "templateProces": "",
+            "content": "Blog simple que j'aai realisé afin d'apprendre a utilisé Laravel",
+            "language": [
+                {
+                    "id": 1,
+                    "name": "html"
+                }
+            ],
+            "frameWork": [],
+            "analyse": [
+                {
+                    "id": 1,
+                    "diagrammeName": "",
+                    "imgUrl": ""
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "E-commerce laravel",
+            "slug": "e-commerce-lara",
+            "subtitle": "E-commerce",
+            "context": "Développeur Web Web Mobil et CDA",
+            "linkGit": "",
+            "bataBase": "",
+            "templateProces": "",
+            "content": " ",
+            "language": [
+                {
+                    "id": 1,
+                    "name": "html"
+                }
+            ],
+            "frameWork": [],
+            "analyse": [
+                {
+                    "id": 1,
+                    "diagrammeName": "",
+                    "imgUrl": ""
                 }
             ]
         }
