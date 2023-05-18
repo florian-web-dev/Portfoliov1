@@ -67,7 +67,7 @@
                         "title": "Vue.js",
                         "name": "Vue js",
                         "value": 75,
-                        "image": "public/img/framework/vue-logo.svg"
+                        "image": "public/img/framework/vue_logo.svg"
                     },
                     {
                         "id": 1,
@@ -90,7 +90,7 @@
                         "title": "",
                         "name": "Spring boot",
                         "value": 70,
-                        "image": "public/img/framework/spring-logo.svg"
+                        "image": "public/img/framework/spring_logo.svg"
                     },
                     {
                         "id": 3,
@@ -238,21 +238,21 @@
                     "figcaption": "Analyse de la fiche de suivi des séances.",
                     "nameFile": "ficheSuivi.jpg",
                     "imgUrl": "../public/img/realisation/ficheSuivi.jpg",
-                    "caption":"<b>Fiche suivi séance </b> <br/> Projet suivi séance."
+                    "caption": "<b>Fiche suivi séance </b> <br/> Projet suivi séance."
                 },
                 {
                     "id": 1,
                     "figcaption": "Use case de l'ensemble du projet.",
                     "nameFile": "UseCaseSuivieSeance.jpg",
                     "imgUrl": "../public/img/realisation/UseCaseSuivieSeance.jpg",
-                    "caption":"<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance."
+                    "caption": "<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance."
                 },
                 {
                     "id": 1,
                     "figcaption": "Diagrammes représentant les tables du projet.",
                     "nameFile": "localdb.png",
                     "imgUrl": "../public/img/realisation/localdb.png",
-                    "caption":"<b>Diagrammes entité-association</b> <br/> Projet suivi séance."
+                    "caption": "<b>Diagrammes entité-association</b> <br/> Projet suivi séance."
                 }
             ]
         },
@@ -277,7 +277,7 @@
                 },
                 {
                     "id": 3,
-                    "name": "js"
+                    "name": "javascript"
                 },
                 {
                     "id": 4,
@@ -335,7 +335,19 @@
             "language": [
                 {
                     "id": 1,
-                    "name": "html"
+                    "name": "html5"
+                },
+                {
+                    "id": 2,
+                    "name": "css3"
+                },
+                {
+                    "id": 3,
+                    "name": "javascript"
+                },
+                {
+                    "id": 4,
+                    "name": "php"
                 }
             ],
             "frameWork": [],
