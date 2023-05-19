@@ -17,7 +17,7 @@ const testReal = document.querySelector('#testReal')
 
 function viewAchievementTableImg(folderImg, data, minefile, size) {
 
-    
+
     return `
         <img class="m-3" src="../public/img/${folderImg}/${data}_logo.${minefile}" alt="${data}" title="${data}"
         style="width: ${size};">
@@ -58,7 +58,7 @@ function checkACookieExists() {
 
         })
 
-        console.log(`> The cookie ${clef} exists`);
+        // console.log(`> The cookie ${clef} exists`);
     } else {
         console.log(`no found ${clef}`);
     }
@@ -77,34 +77,48 @@ function eachDataRender(datas, cookieValue) {
         if (element.title === cookieValue) {
             // console.log(element);
 
-            titleProjetRealiz.textContent = element.title;
-            
+            if (null != titleProjetRealiz) {
+                titleProjetRealiz.textContent = element.title;
+            }
+
+
+
             let elementContent = element.content
 
             addNodeElementWhoContent("#text-content-realiz", "p", "resum-projet-text", elementContent)
 
             element.language.forEach(el => {
                 // console.log(el.name);
-                chaine += viewAchievementTableImg('language', el.name,'svg', '3rem');
-                tableTdLanguage.innerHTML = chaine
+                chaine += viewAchievementTableImg('language', el.name, 'svg', '3rem');
+                if (null != tableTdLanguage) {
+                    tableTdLanguage.innerHTML = chaine
+                }
+
             });
 
 
             element.frameWork.forEach(el => {
                 // console.log(el.name);
-                chaine2 += viewAchievementTableImg('framework', el.name,'svg', '8rem');
-                tableTdFramwork.innerHTML = chaine2
+                chaine2 += viewAchievementTableImg('framework', el.name, 'svg', '8rem');
+                if (null != tableTdFramwork) {
+                    tableTdFramwork.innerHTML = chaine2
+                }
+
             });
 
             element.analyse.forEach(el => {
                 // console.log(el.nameFile);
                 chaine3 += viewAchievDiagram(el)
-                divRealizDiagrame.innerHTML = chaine3
+                if (null != divRealizDiagrame) {
+                    divRealizDiagrame.innerHTML = chaine3
+                }
+
             });
 
-            console.log(element.bataBase);
-            tableTdSgbd.innerHTML = viewAchievementTableImg('tools',element.bataBase,'png', '5rem');
-            
+            // console.log(element.bataBase);
+            if (null != tableTdSgbd)
+                tableTdSgbd.innerHTML = viewAchievementTableImg('tools', element.bataBase, 'png', '5rem');
+
 
         }
     });
@@ -142,7 +156,10 @@ function addNodeElementWhoContent(elmIdParent, noeudCre, classNameParam, newCont
             txt += `<p>${elm}</p>`
 
         })
-        elmAddParent.innerHTML = txt
+        if (null != elmAddParent) {
+            elmAddParent.innerHTML = txt
+        }
+
     }
 
 }

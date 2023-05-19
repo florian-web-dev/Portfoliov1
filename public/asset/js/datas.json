@@ -258,7 +258,7 @@
         },
         {
             "id": 2,
-            "title": "Food easy home",
+            "title": "Food Easy Home",
             "slug": "food-easy-home",
             "subtitle": "Projet site E-commerce, vanilla",
             "context": "Développeur Web Web Mobil",
@@ -299,7 +299,7 @@
         },
         {
             "id": 3,
-            "title": "Mini projet",
+            "title": "Mini Projet",
             "slug": "mini-projet",
             "subtitle": "Plusieurs projet Vuejs/Adroid",
             "context": "Développeur Web Web Mobil et CDA",
@@ -361,7 +361,7 @@
         },
         {
             "id": 5,
-            "title": "Blog laravel",
+            "title": "Blog Laravel",
             "slug": "blog-laravel",
             "subtitle": "laravel",
             "context": "Autodidacte",
@@ -386,7 +386,7 @@
         },
         {
             "id": 6,
-            "title": "E-commerce laravel",
+            "title": "E-commerce Laravel",
             "slug": "e-commerce-lara",
             "subtitle": "E-commerce",
             "context": "Développeur Web Web Mobil et CDA",

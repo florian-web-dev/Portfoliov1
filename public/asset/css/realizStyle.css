@@ -1,6 +1,16 @@
 /* ---------------------------------------------------------------------------------------
                                         Page Réalisation
 --------------------------------------------------------------------------------------- */
+:root {
+    --size-btn: 9rem;
+    /* --btn-height-realiz: var(--btn-width-realiz);
+    --btn-width-realiz: var(--size-btn); */
+
+    /* --btn-mouse-event-follow: ; */
+    /* --btn-bg-gradiant-black: var(--bs-dark-rgb); */
+    --btn-bg-gradiant-black: #212528;
+
+}
 
 .table-style {
     background-color: #ffaebc21;
@@ -9,21 +19,79 @@
     border-collapse: collapse;
     vertical-align: top;
     width: 100%;
+
 }
 
-.section-btn-realize {
+.div-btn-realize {
     display: flex;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    margin: 1rem;
+    /* margin: 1rem; */
     padding: 1rem;
+
+    /* background-color: rgba(255, 192, 203, 0.589); */
+    background-color: var(--btn-bg-gradiant-black);
 }
 
+.btn-show-realiz {
+    background-color: transparent;
+    padding: 1rem;
+    border: 1px solid #212528;
+    border-radius: 1rem;
+    color: snow;
+    text-shadow: 1px 1px 2px black;
+    font-size: larger;
+}
 
+.btn-show-realiz:hover {
+    animation-duration: .3s;
+    animation-name: cling;
+}
+.title-projet-realiz{
+    /* background: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4); */
+    /* background-color: #21252888; */
+    font-family: cursive;
+    /* color: snow; */
+    padding: 1rem;
+    text-decoration: underline;
+    /* text-shadow: 0px 0px 5px black; */
+}
 
+@keyframes cling {
 
+    from {
+        /* background-color: rgb(255, 255, 255); */
+        box-shadow: inset 0 0 2px 2px rgb(253 253 253 / 12%), inset 0 0 12px 6px rgb(253 253 253 / 23%);
+    }
+
+    15% {
+        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 0%, snow 5%, var(--btn-bg-gradiant-black) 21%);
+    }
+
+    25% {
+        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 20%, snow 25%, var(--btn-bg-gradiant-black) 41%);
+    }
+
+    50% {
+        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 40%, snow 45%, var(--btn-bg-gradiant-black) 61%);
+    }
+
+    75% {
+        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 60%, snow 65%, var(--btn-bg-gradiant-black) 81%);
+    }
+
+    80% {
+        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 70%, snow 75%, var(--btn-bg-gradiant-black) 91%);
+    }
+
+    to {
+        /* background-color: rgb(159 159 159); */
+        /* background: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4); */
+    }
+
+}
 
 
 
