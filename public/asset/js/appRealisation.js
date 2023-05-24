@@ -26,7 +26,7 @@ function viewAchievementTableImg(folderImg, data, minefile, size) {
 
 function viewAchievDiagram(data) {
     return `
-    <div class="m-2 p-3 shadow-box">
+    <div class="m-2 p-3 shadow-box scale">
         <a class="" data-fancybox="real-ssg" data-src="../public/img/realisation/${data.nameFile}"
             data-caption="${data.caption}">
             <img class="w-100" src="../public/img/realisation/${data.nameFile}"></a>
@@ -35,7 +35,6 @@ function viewAchievDiagram(data) {
     </div>
     `
 }
-
 
 
 

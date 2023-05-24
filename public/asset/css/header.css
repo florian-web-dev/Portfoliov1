@@ -33,8 +33,13 @@
     color: snow;
     padding: 0.5 rem;
 }
+.nav-link:active{
+    color: green;
+}
+
 .nav-menu-bgColor{
-    background: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4);
+    /* background: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4); */
+    background: var(--bg-gradiant-gray-transparent );
 }
 
 .active{
@@ -44,6 +49,23 @@
     transform: scale(1.1);
     border-radius: 1rem 1rem 0 0;
 }
+
+/* Switch display dark mode */
+
+.div-form-switch {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0;
+}
+
+
+.form-switch .form-check-input {
+    width: 4em;
+    height: 2rem;
+}
+
+
 /* ---------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------ CONTENT HEADER ----------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------- */

@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="./public/asset/css/header.css" type="text/CSS">
     <link rel="stylesheet" href="./public/asset/css/style.css" type="text/CSS">
+    <link rel="stylesheet" href="./public/asset/css/realizStyle.css" type="text/CSS">
 
     <!-- <link rel="stylesheet" href="content/css/stylemodal.css" type="text/CSS"> -->
 
@@ -25,7 +26,7 @@
 
 </head>
 
-<body>
+<body class="bg-white">
 
     <header class="header" id="particles-js">
 
@@ -50,12 +51,10 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse item-menu " id="navbarSupportedContent">
+
+            <div class="collapse navbar-collapse item-menu text-center" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto" id="listNav">
 
-                    <!-- <li class="nav-item">
-          <a class="nav-link " aria-current="top" href="./#">Accueil</a>
-        </li> -->
                     <li class="nav-item">
                         <a class="nav-link " aria-current="presentation" href="./#presentation">Présentation</a>
                     </li>
@@ -71,14 +70,26 @@
                     </li>
 
                 </ul>
+                <div class="div-form-switch form-switch" id="divSwicthDark">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchDarckMode" placeholder="Dark">
+                    <label class="form-check-label m-3" for="flexSwitchDarckMode" id="labelDarkMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff"
+                            class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                        </svg>
+                    </label>
+                </div>
             </div>
+
         </div>
     </nav>
     <!-- ---------------------------------------------------------------------------------------------------->
     <!----------------------------------------------- Main -------------------------------------------------->
     <!-- ---------------------------------------------------------------------------------------------------->
     <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
-        <section class="container-fluid p-4 d-flex align-items-center presentation-hei " id="presentation">
+
+        <section class="container-fluid section-presentation" id="presentation">
 
             <div class="text-center m-auto p-2 w-75">
                 <h2 class="m-4">À propos de moi</h2>
@@ -104,7 +115,7 @@
         <!------------------------------------------- Compétences ----------------------------------------------->
         <!-- ---------------------------------------------------------------------------------------------------->
         <section class="reveal " id="competences">
-            <div class="reveal-1">
+            <div class="reveal-1 div-title">
                 <h2 class="title-section">Compétences</h2>
             </div>
             <div class="row mx-0 ">
@@ -176,7 +187,7 @@
                                             alt="Logo UML" title="Unified Modeling Language">
                                     </div>
                                     <div class="col-md-8">
-                                        <div class="card-body">
+                                        <div class=" ">
 
                                             <ul class="list-group" id="uml">
 
@@ -212,7 +223,7 @@
 
         <section class="reveal container-fluid p-0" id="realisation">
 
-            <div class="reveal-1">
+            <div class="reveal-1 div-title">
                 <h2 class="title-section">Réalisation</h2>
             </div>
 
@@ -227,10 +238,12 @@
 
 
             <article class="text-center reveal">
-                <h3 class="reveal-1">Projet realiser en formation </h3>
+                <h3 class="reveal-1">Voici quelque projet realiser</h3>
                 <div class="flex-wrap-container m-auto reveal-3" id="achievementShow">
 
-<!-- 
+
+                    <!-- 
+
                     <div class="card-achiev m-3 rounded">
                         <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100" />
                         <div class="fadedbox">
@@ -320,7 +333,7 @@
 
             </article>
 
-      
+
             <hr>
             <details>
                 <summary> projet Suivi Séance Java</summary>

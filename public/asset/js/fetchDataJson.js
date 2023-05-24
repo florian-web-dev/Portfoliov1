@@ -306,21 +306,25 @@ function viewList(data) {
 
 
 
+
+
 function viewAchiev(data) {
     return `
-    <div class="card-achiev m-3 rounded">
-        <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100" />
-        <div class="fadedbox">
+        <div class="card-achiev m-3 ">
+            <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100 rounded" />
+            <div class="fadedbox">
 
-            <h5 class="title-fade">${data.title}</h5>
-            <div class="card-body-achiev">
-                <p title="Concepteur Développeur Application">${data.subtitle}</p>
-                <a href="./pages/realisation.html" onauxclick="addCookie('${data.title}')" onclick="addCookie('${data.title}')"
-                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir</a>
+                <h5 class="title-fade">${data.title}</h5>
+                <div class="card-body-achiev">
+                    <p title="Concepteur Développeur Application">${data.subtitle}</p>
+                    <a href="./pages/realisation.html" onauxclick="addCookie('${data.title}')" onclick="addCookie('${data.title}')"
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir</a>
+                </div>
+
             </div>
-
+            <h6 class="m-1">${data.context}</h6>
         </div>
-    </div>
+
 `
 }
 // console.log(arrayLang);

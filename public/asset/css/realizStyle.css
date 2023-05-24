@@ -1,16 +1,7 @@
 /* ---------------------------------------------------------------------------------------
                                         Page Réalisation
 --------------------------------------------------------------------------------------- */
-:root {
-    --size-btn: 9rem;
-    /* --btn-height-realiz: var(--btn-width-realiz);
-    --btn-width-realiz: var(--size-btn); */
 
-    /* --btn-mouse-event-follow: ; */
-    /* --btn-bg-gradiant-black: var(--bs-dark-rgb); */
-    --btn-bg-gradiant-black: #212528;
-
-}
 
 .table-style {
     background-color: #ffaebc21;
@@ -32,7 +23,7 @@
     padding: 1rem;
 
     /* background-color: rgba(255, 192, 203, 0.589); */
-    background-color: var(--btn-bg-gradiant-black);
+    background-color: var(--color-footer);
 }
 
 .btn-show-realiz {
@@ -67,23 +58,23 @@
     }
 
     15% {
-        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 0%, snow 5%, var(--btn-bg-gradiant-black) 21%);
+        background: linear-gradient(315deg, var(--color-footer) 0%, snow 5%, var(--color-footer) 21%);
     }
 
     25% {
-        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 20%, snow 25%, var(--btn-bg-gradiant-black) 41%);
+        background: linear-gradient(315deg, var(--color-footer) 20%, snow 25%, var(--color-footer) 41%);
     }
 
     50% {
-        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 40%, snow 45%, var(--btn-bg-gradiant-black) 61%);
+        background: linear-gradient(315deg, var(--color-footer) 40%, snow 45%, var(--color-footer) 61%);
     }
 
     75% {
-        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 60%, snow 65%, var(--btn-bg-gradiant-black) 81%);
+        background: linear-gradient(315deg, var(--color-footer) 60%, snow 65%, var(--color-footer) 81%);
     }
 
     80% {
-        background: linear-gradient(315deg, var(--btn-bg-gradiant-black) 70%, snow 75%, var(--btn-bg-gradiant-black) 91%);
+        background: linear-gradient(315deg, var(--color-footer) 70%, snow 75%, var(--color-footer) 91%);
     }
 
     to {
