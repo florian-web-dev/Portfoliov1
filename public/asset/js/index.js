@@ -279,10 +279,10 @@ function addCookie(value) {
 reveal()
 
 
-window.addEventListener('load', (event) => {
-    reportWindowSize();
+// window.addEventListener('load', (event) => {
+//     reportWindowSize();
 
-});
+// });
 
 display.forEach((e) => {
     e.addEventListener('resize', window.onresize = reportWindowSize)

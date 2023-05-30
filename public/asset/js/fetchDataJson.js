@@ -342,6 +342,8 @@ function viewAchiev(data) {
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée');
 
+    reportWindowSize();
+
     eachFramLang(arrayLang, true, true, viewCard)
 
     eachFramLang(arrayLang, false, true, viewCard)
@@ -379,4 +381,3 @@ showProgress.forEach(btnProgress => {
 });
 
 eachDataForPush()
-

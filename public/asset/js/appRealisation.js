@@ -51,6 +51,11 @@ function checkACookieExists() {
         fetchJson('./../public/asset/js/datas.json').then((datas) => {
             // console.log(datas.realisation);
 
+            console.log(datas);
+            console.log(datas.realisation);
+            // if (datas.) {
+                
+            // }
             let dataRealisation = datas.realisation
 
             eachDataRender(dataRealisation, cookieValue);
