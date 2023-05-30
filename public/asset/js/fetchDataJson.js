@@ -193,7 +193,11 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
 function eachData(allSkills, elm, callback = viewCard) {
     let chaine = "";
 
-    if (allSkills === undefined ) {
+    // if (allSkills === undefined ) {
+    //     
+    // }
+    console.log(document.readyState);
+    if (document.readyState != "complete") {
         window.location.reload();
     }
     allSkills.forEach(skill => {
@@ -340,7 +344,8 @@ function viewAchiev(data) {
 // console.log(arrayAchiev);
 
 window.addEventListener('load', () => {
-    console.log('La page est complètement chargée');
+    console.log('La page est complètement chargée load');
+    console.log(document.readyState);
 
     reportWindowSize();
 
@@ -380,4 +385,9 @@ showProgress.forEach(btnProgress => {
     })
 });
 
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     console.log('La page est complètement chargée DOMContentLoaded');
+//     console.log(document.readyState);
+// });
+console.log(document.readyState);
 eachDataForPush()

@@ -111,6 +111,8 @@ flexSwitchDarckMode.addEventListener('input', (event) => {
 const body = document.querySelector('body')
 const sections = document.querySelectorAll('section')
 const navbar = document.querySelector('#navbar');
+
+
 function darkMode() {
 
     sections.forEach(section => {

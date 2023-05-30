@@ -231,6 +231,7 @@ a:hover {
     background-position: center center;
     height: 40vh;
     filter: brightness(.8);
+    margin: 4rem auto;
 }
 
 
