@@ -155,7 +155,7 @@ function parseForm(form) {
 formWeather.addEventListener('submit', function (event) {
 
     let formData = parseForm(formWeather)
-    console.log(formData.city);
+    // console.log(formData.city);
     fetchApi(`https://api-adresse.data.gouv.fr/search/?q=${formData.city}&postcode=${formData.postcode}&limit=3`).then(function (data) {
 
         console.log(data);

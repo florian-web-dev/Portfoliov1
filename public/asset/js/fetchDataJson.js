@@ -196,7 +196,7 @@ function eachData(allSkills, elm, callback = viewCard) {
     // if (allSkills === undefined ) {
     //     
     // }
-    console.log(document.readyState);
+    // console.log(document.readyState);
     if (document.readyState != "complete") {
         window.location.reload();
     }
@@ -345,7 +345,7 @@ function viewAchiev(data) {
 
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée load');
-    console.log(document.readyState);
+    // console.log(document.readyState);
 
     reportWindowSize();
 
@@ -385,9 +385,5 @@ showProgress.forEach(btnProgress => {
     })
 });
 
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     console.log('La page est complètement chargée DOMContentLoaded');
-//     console.log(document.readyState);
-// });
-console.log(document.readyState);
+
 eachDataForPush()

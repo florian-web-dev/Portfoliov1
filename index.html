@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edje">
-    <meta name="viewport" content="width=device-width" , inital-scale="1.0">
-    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" inital-scale="1.0">
     <!-- Meta for git -->
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
@@ -19,7 +18,7 @@
     <link rel="stylesheet" href="./public/asset/css/style.css" type="text/CSS">
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
 
 
 </head>
@@ -59,16 +58,16 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto" id="listNav">
 
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="presentation" href="./#presentation">Présentation</a>
+                        <a class="nav-link " aria-current="location" href="./#presentation">Présentation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="competences" href="./#competences">Compétence</a>
+                        <a class="nav-link " aria-current="location" href="./#competences">Compétence</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="realisation" href="./#realisation">Réalisation</a>
+                        <a class="nav-link " aria-current="location" href="./#realisation">Réalisation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="contact" href="./pages/contact.html">Contactez-moi</a>
+                        <a class="nav-link " aria-current="page" href="./pages/contact.html">Contactez-moi</a>
                     </li>
                     <li class="nav-item display" id="responsive">
 
@@ -76,7 +75,7 @@
 
                 </ul>
                 <div class="div-form-switch form-switch" id="divSwicthDark">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchDarckMode" placeholder="Dark">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchDarckMode">
                     <label class="form-check-label m-3" for="flexSwitchDarckMode" id="labelDarkMode">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff"
                             class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
@@ -249,98 +248,7 @@
 
             <article class="text-center reveal">
                 <h3 class="reveal-1">Voici quelque projet realiser</h3>
-                <div class="flex-wrap-container m-auto reveal-3" id="achievementShow">
-
-
-                    <!-- 
-
-                    <div class="card-achiev m-3 rounded">
-                        <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100" />
-                        <div class="fadedbox">
-
-                            <h5 class="title-fade">Suivi Séance</h5>
-                            <div class="card-body-achiev">
-                                <p title="Concepteur Développeur Application">Projet Java C.D.A.</p>
-                                <a href="./pages/realisation.html" id="cookieTest" onclick="addCookie('Suivi Séance')"
-                                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir</a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card-achiev m-3 rounded">
-                        <img src="public/img/noir.jpg" class="w-100" alt="">
-
-                        <div class="fadedbox">
-
-                            <h5 class="title-fade">E-commerce</h5>
-                            <div class="card-body-achiev">
-                                <p title="Développeur Web Web Mobil">Projet PHP full vanilla DWWM</p>
-                                <a href="http://" class="btn btn-primary" target="_blank"
-                                    rel="noopener noreferrer">Voir</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-achiev m-3 rounded">
-                        <img src="public/img/noir.jpg" class="w-100" alt="">
-
-                        <div class="fadedbox">
-                            <h5 class="title-fade">Mini projet</h5>
-                            <div class="card-body-achiev">
-                                <p>text</p>
-                                <a href="http://" class="btn btn-primary" target="_blank"
-                                    rel="noopener noreferrer">Voir</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <h3 class="reveal-1">Projet realiser en autodidacte </h3>
-                <div class="flex-wrap-container m-auto reveal-3">
-
-                    <div class="card-achiev m-3 rounded">
-                        <img src="public/img/noir.jpg" class="w-100" alt="">
-
-                        <div class="fadedbox">
-                            <h5 class="title-fade">Projet Api</h5>
-                            <div class="card-body-achiev">
-                                <p>Api Java / Api Lavarel</p>
-                                <a href="http://" class="btn btn-primary" target="_blank"
-                                    rel="noopener noreferrer">Voir</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-achiev m-3 rounded">
-                        <img src="public/img/noir.jpg" class="w-100" alt="">
-
-                        <div class="fadedbox">
-                            <h5 class="title-fade">Blog laravel</h5>
-                            <div class="card-body-achiev">
-                                <p>text</p>
-                                <a href="http://" class="btn btn-primary" target="_blank"
-                                    rel="noopener noreferrer">Voir</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-achiev m-3 rounded">
-                        <img src="public/img/noir.jpg" class="w-100" alt="">
-
-                        <div class="fadedbox">
-                            <h5 class="title-fade">E-commerce Laravel</h5>
-                            <div class="card-body-achiev">
-                                <p>text</p>
-                                <a href="http://" class="btn btn-primary" target="_blank"
-                                    rel="noopener noreferrer">Voir</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
-
+                <div class="flex-wrap-container m-auto reveal-3" id="achievementShow"></div>
             </article>
 
 
