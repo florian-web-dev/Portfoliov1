@@ -12,9 +12,7 @@
 
 
     /* -------- Linear gradiant nav ---- */
-    --bg-gradiant-gray-transparent :linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4)
-
-    ;
+    --bg-gradiant-gray-transparent: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4);
     /* -------- Linear gradiant ---- */
 
     --bg-gradiant-gray: linear-gradient(45deg, #000000a6, transparent), linear-gradient(45deg, transparent, #000000c4);
@@ -139,6 +137,9 @@ a:hover {
     transition-delay: .5s;
 }
 
+.reveal-4{
+    transition-delay: .6s;
+}
 
 /*-------------------------------------------------------------------------------------------- 
                                         Global part end
@@ -312,6 +313,85 @@ a:hover {
 }
 
 
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+
+.div-uml {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "entity class object"
+        "entity img object"
+        "activity img useCase"
+        "activity sequense useCase";
+
+    margin: 2rem auto ;
+    padding: 2rem;
+    width: inherit;
+    
+}
+
+.object {
+    grid-area: object;
+    padding: 1rem;
+    box-shadow: 2px -2px 3px 3px #7c7c7c69;
+    border-radius: 50% 50% 50% 0;
+}
+
+.class {
+    grid-area: class;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0px -3px 4px 3px #7c7c7c69;
+}
+
+.useCase {
+    grid-area: useCase;
+    padding: 1rem;
+    box-shadow: 2px 1px 3px 3px #7c7c7c69;
+    border-radius: 0% 50% 50% 50%;
+}
+
+.img {
+    grid-area: img;
+    padding: 1rem;
+
+    /* border: 1px solid #7c7c7c69; */
+}
+
+.sequense {
+    grid-area: sequense;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 3px 4px 3px #7c7c7c69;
+}
+
+.activity {
+    grid-area: activity;
+    padding: 1rem;
+    box-shadow: -1px 1px 3px 3px #7c7c7c69;
+    border-radius: 50% 0% 50% 50%;;
+}
+
+
+.entity {
+    grid-area: entity;
+    padding: 1rem;
+
+    box-shadow: -1px -2px 3px 3px #7c7c7c69;
+    border-radius: 50% 50% 0 50%;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
 
 
 /* ---------------------------------------------------------------------------------------
@@ -333,6 +413,133 @@ summary {
 
 details[open] {
     padding: .5em;
+}
+
+/* ---------------------------------------------------------------------------------------
+                                        End page index
+--------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------------
+                                        Page contact (Carte de visite)
+--------------------------------------------------------------------------------------- */
+
+
+
+
+/*------------------ part main --------------------- */
+.main-contact {
+    /* background-image: url(../../img/httpWord_fond.jpg); */
+    background-image: url(../../img/contact_fond.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 80vh; */
+    height: 120%;
+    width: 100%;
+
+}
+
+.title-contact {
+    text-shadow: 0px 0px 3px white;
+}
+
+
+.article-business-card {
+    width: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16%;
+}
+
+.div-business-card {
+    width: 90%;
+    /* max-width: 440px; */
+    max-width: 26%;
+    /* max-width: 26vw; */
+    color: aliceblue;
+    text-align: center;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 1rem;
+    /* background-color: var(--color-footer); */
+    background-color: #3e3633;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+
+}
+
+.div-body-business-card {
+
+    /* transform: translateZ(40px); */
+    /* border: 10px solid white; */
+    border-radius: 1rem;
+    transform: translateZ(50px);
+
+}
+
+.div-body-business-card:hover {
+    box-shadow: 0 0 2px 2px rgba(133, 133, 133, 0.438);
+
+}
+
+.img-profil-contact {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 2px #7474749c;
+}
+
+.div-link-contact {
+    text-align: center;
+    /* background-color: aliceblue; */
+    width: 30vw;
+    padding: 1rem;
+    -moz-transform: skew(-25deg, 25deg);
+    -webkit-transform: skew(-25deg, 25deg);
+    -o-transform: skew(-25deg, 25deg);
+    -ms-transform: skew(-25deg, 25deg);
+    transform: skew(-25deg, 25deg);
+    margin: 1.5rem;
+}
+
+.div-link-contact a {
+    display: block;
+    margin: 1rem auto;
+    padding: 2rem;
+    text-decoration: none;
+    width: 70%;
+}
+
+
+
+.business-card-div-link {
+    transform: translateZ(50px);
+}
+
+
+.btn-contact {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    /* background: var(--color-footer); */
+
+    color: snow;
+    border: 1px solid white;
+    box-shadow: 0 0 3px 2px #81818169;
+    border-radius: 2rem;
+    /* border: 4mm ridge gray; */
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.btn-contact:hover {
+    background-color: #21252840;
+    color: snow;
+    text-decoration: underline;
+
 }
 
 
@@ -404,6 +611,36 @@ details[open] {
     .section-presentation {
 
         height: auto;
+    }
+
+    .main-contact {
+
+        background-image: url(../../img/contact_fond.jpg);
+        background-position: right center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 154vh;
+        /* height: 120%;
+        width: 100%; */
+    }
+
+    .div-link-contact {
+        display: contents;
+    }
+
+    .article-business-card {
+        /* flex-direction: column; */
+        display: block;
+        width: 100%;
+    }
+
+    .div-business-card {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .div-link-contact a {
+        color: black;
     }
 }
 

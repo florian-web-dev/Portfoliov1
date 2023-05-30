@@ -193,6 +193,9 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
 function eachData(allSkills, elm, callback = viewCard) {
     let chaine = "";
 
+    if (allSkills === undefined ) {
+        window.location.reload();
+    }
     allSkills.forEach(skill => {
         chaine += callback(skill)
     });
@@ -305,7 +308,12 @@ function viewList(data) {
 }
 
 
+function viewList2(data) {
+    return `
 
+        <div class="${data.className} m-auto">${data.name}</div>
+    `
+}
 
 
 function viewAchiev(data) {
@@ -348,7 +356,7 @@ window.addEventListener('load', () => {
     eachData(arrayTools[0], idSectionTools);
 
 
-    eachData(arrayAnalyse[0], idSectionUml, viewList);
+    eachData(arrayAnalyse[0], idSectionUml, viewList2);
 
     eachData(arrayAchiev[0], achievementShow, viewAchiev);
 })

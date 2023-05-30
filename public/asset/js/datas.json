@@ -121,32 +121,44 @@
                 {
                     "id": 1,
                     "name": "Diagramme d'entité relationnel",
+                    "className": "entity reveal-1",
                     "content": "Améliore la visualisation ainsi que la création de la Base de données."
                 },
                 {
                     "id": 2,
                     "name": "Diagramme de classe",
+                    "className": "class reveal-1",
                     "content": "Indispensable pour tout type de projet, un gain de temps futur."
                 },
                 {
                     "id": 3,
                     "name": "Diagramme d'objet",
+                    "className": "object reveal-1",
                     "content": "Indispensable pour tout type de projet, un gain de temps futur."
                 },
                 {
                     "id": 4,
                     "name": "Diagramme de cas d'utilisation",
+                    "className": "useCase reveal-3",
                     "content": "Indispensable pour tout type de projet, un gain de temps futur."
                 },
                 {
                     "id": 5,
                     "name": "Diagramme de sequence",
+                    "className": "sequense reveal-3",
                     "content": "Indispensable pour tout type de projet, un gain de temps futur."
                 },
                 {
                     "id": 6,
                     "name": "Diagramme d'activité",
+                    "className": "activity reveal-3",
                     "content": "Indispensable pour tout type de projet, un gain de temps futur."
+                },
+                {
+                    "id": 7,
+                    "name": "<img src='public/img/tools/UML_logo.svg' class='img-fluid reveal-1'alt='Logo UML' title='Unified Modeling Language'>",
+                    "className": "img",
+                    "content": ""
                 }
             ],
             "tools": [

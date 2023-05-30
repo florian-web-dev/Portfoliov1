@@ -49,7 +49,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="snow" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
             </button>
 
             <div class="collapse navbar-collapse item-menu text-center" id="navbarSupportedContent">
@@ -64,7 +69,9 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="realisation" href="./#realisation">Réalisation</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="contact" href="/pages/contact.html">Contactez-moi</a>
+                    </li>
                     <li class="nav-item display" id="responsive">
 
                     </li>
@@ -107,6 +114,7 @@
                     formation, j'ai eu l'opportunité réalisé divers projets, de
                     l'analyse au travers de divers diagrammes a la réalisation du code sans oublier le maquettage, je
                     continue à me former en réalisant divers projets personnels.</p>
+                    
             </div>
 
         </section>
@@ -177,39 +185,43 @@
                     </div>
                     <hr>
                     <h3 class="text-center">Autres Outils</h3>
-                    <div class="d-flex align-items-center justify-content-around">
-                        <div class="">
-                            <!-- <div class="container-flex-skill" id="uml"></div> -->
-                            <div class=" mb-3">
-                                <div class="row g-0 align-items-center">
-                                    <div class="col-md-4">
-                                        <img src="public/img/tools/UML_logo.svg" class="img-fluid rounded-start"
-                                            alt="Logo UML" title="Unified Modeling Language">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class=" ">
 
-                                            <ul class="list-group" id="uml">
+                    <div></div>
+                    <div class="container-flex-skill " id="tools"></div>
+                    <hr>
+                    <div class="div-uml text-center reveal" id="uml">
 
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="">
-                            <div class="container-flex-skill" id="tools"></div>
-                        </div>
                     </div>
 
 
+                    <!-- 
                     <div class="container-flex-skill col" id="competence-in-progress">
 
-                    </div>
+                    </div> -->
+                    <!-- <div class="container w-25 text-center">
+                        <div class="object">
+                            <p class="m-auto">Diagramme d'object</p>
+                        </div>
+                        <div class="class">
+                            <p class="m-auto">Diagramme de classe</p>
+                        </div>
+                        <div class="useCase">
+                            <p class="m-auto">Diagramme de cas d'utilisation</p>
+                        </div>
+                        <div class="img"> <img src="public/img/tools/UML_logo.svg" class="img-fluid rounded-start"
+                                alt="Logo UML" title="Unified Modeling Language"></div>
+                        <div class="sequense">
 
+                            <p class="m-auto">Diagramme de sequence</p>
+                        </div>
+                        <div class="activity">
+                            <p class="m-auto">Diagramme d'activité</p>
+                        </div>
+                        <div class="entity">
+
+                            <p class="m-auto">Diagramme d'entité relationnel </p>
+                        </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -334,8 +346,8 @@
             </article>
 
 
-            <hr>
-            <details>
+
+            <!-- <details>
                 <summary> projet Suivi Séance Java</summary>
                 <article class="container shadow-box">
 
@@ -372,7 +384,7 @@
                         </div>
 
                         <div class="col-sm-4 table-responsive">
-                            <!-- <h6 class="text-center">Langage, framework et base de donnée utlisé pour le projet</h6> -->
+                  
                             <table class="w-50 table text-center table align-middle ">
                                 <thead>
                                     <tr>
@@ -452,9 +464,7 @@
 
 
                 </article>
-            </details>
-
-            <hr>
+            </details> -->
 
         </section>
         <div class="banner-deco"></div>
@@ -462,6 +472,16 @@
 
 
 
+    <div>
+
+        <hr>
+        <hr>
+
+
+
+
+
+    </div>
 
 
     <!-- ---------------------------------------------------------------------------------------------------->
@@ -547,8 +567,8 @@
 
             <!-- Copyright -->
             <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2); letter-spacing: .2rem;">
-                ©
-                <?php echo date('d/m/Y'); ?> Gagnant Florian, Tous droits réservés.
+                © Gagnant Florian, Tous droits réservés.
+                <a href="./pages/test.html" style="color: rgba(0, 0, 0, 0.2);"> lien </a>
             </div>
             <!-- Copyright -->
 
@@ -557,7 +577,7 @@
         </div>
         <div class="container p-4 text-centre">
 
-            <a href="./pages/test.html">lien</a>
+            <p><q>Ce que je ne sais pas aujourd'hui, je le saurai demain.</q> Proverbe personnel</p>
         </div>
 
     </footer>
