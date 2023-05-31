@@ -249,21 +249,28 @@
                     "id": 1,
                     "figcaption": "Analyse de la fiche de suivi des séances.",
                     "nameFile": "ficheSuivi.jpg",
-                    "imgUrl": "../public/img/realisation/ficheSuivi.jpg",
+                    "imgUrl": "../public/img/realisation/suivie_seance/ficheSuivi.jpg",
                     "caption": "<b>Fiche suivi séance </b> <br/> Projet suivi séance."
                 },
                 {
-                    "id": 1,
+                    "id": 2,
                     "figcaption": "Use case de l'ensemble du projet.",
                     "nameFile": "UseCaseSuivieSeance.jpg",
-                    "imgUrl": "../public/img/realisation/UseCaseSuivieSeance.jpg",
+                    "imgUrl": "../public/img/realisation/suivie_seance/UseCaseSuivieSeance.jpg",
                     "caption": "<b>Diagramme de cas d’utilisation</b> <br/> Projet suivi séance."
                 },
                 {
-                    "id": 1,
-                    "figcaption": "Diagrammes représentant les tables du projet.",
+                    "id": 3,
+                    "figcaption": "Diagramme entité-association.",
                     "nameFile": "localdb.png",
-                    "imgUrl": "../public/img/realisation/localdb.png",
+                    "imgUrl": "../public/img/realisation/suivie_seance/localdb.png",
+                    "caption": "<b>Diagrammes entité-association</b> <br/> Projet suivi séance."
+                },
+                {
+                    "id": 4,
+                    "figcaption": "Diagramme de classe",
+                    "nameFile": "DiagrammeClasse.png",
+                    "imgUrl": "../public/img/realisation/suivie_seance/DiagrammeClasse.png",
                     "caption": "<b>Diagrammes entité-association</b> <br/> Projet suivi séance."
                 }
             ]

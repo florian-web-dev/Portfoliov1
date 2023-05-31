@@ -26,10 +26,10 @@ function viewAchievementTableImg(folderImg, data, minefile, size) {
 
 function viewAchievDiagram(data) {
     return `
-    <div class="m-2 p-3 shadow-box scale">
-        <a class="" data-fancybox="real-ssg" data-src="../public/img/realisation/${data.nameFile}"
+    <div class="p-3 w-50 scale div-border">
+        <a class="" data-fancybox="real-ssg" data-src="../public/img/realisation/suivie_seance/${data.nameFile}"
             data-caption="${data.caption}">
-            <img class="w-100" src="../public/img/realisation/${data.nameFile}"></a>
+            <img class="w-100" src="../public/img/realisation/suivie_seance/${data.nameFile}"></a>
 
         <figcaption class="text-center">${data.figcaption}</figcaption>
     </div>
