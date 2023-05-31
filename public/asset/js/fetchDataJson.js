@@ -321,7 +321,7 @@ function viewList2(data) {
 function viewAchiev(data) {
     return `
     <div class="div-card-achiev">
-        <div class="card-achiev m-3 ">
+        <div class="card-achiev">
             <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100 rounded" />
             <div class="fadedbox">
 
