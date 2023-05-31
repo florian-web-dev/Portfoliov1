@@ -262,7 +262,7 @@ a:hover {
 }
 
 .card-achiev {
-    /* width: 30%; */
+    width: 100%;
     /* height: 100%; */
     /* background-image: url('../../img/noir.jpg'); */
     /* cursor: pointer; */
@@ -683,7 +683,7 @@ details[open] {
 
 @media(width <=920px) {
     .div-card-achiev {
-        width: 80%;
+        width: 100%;
         height: auto;
         margin: auto;
     }
@@ -694,13 +694,13 @@ details[open] {
 
     .card-achiev .title-fade {
         opacity: 1;
-        font-size: xxx-large;
+        /* font-size: xxx-large; */
         /* color: red; */
     }
-    .card-body-achiev p{
+    /* .card-body-achiev p{
         color: red;
         font-size: x-large;
-    }
+    } */
 }
 
 /* ----------CSS footer ----------------------*/
