@@ -49,7 +49,7 @@ async function fetchJson(url) {
 
         } else {
             console.log(`pas Ok : Invalid Response `);
-            window.location.reload();
+            // window.location.reload();
         }
     } catch ($e) {
         console.log("Catch : ERROR " + $e)
