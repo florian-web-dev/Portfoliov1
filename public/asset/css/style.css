@@ -94,6 +94,7 @@ li {
 
 a:hover {
     cursor: pointer;
+    color: inherit;
 }
 
 
@@ -137,7 +138,7 @@ a:hover {
     transition-delay: .5s;
 }
 
-.reveal-4{
+.reveal-4 {
     transition-delay: .6s;
 }
 
@@ -250,11 +251,19 @@ a:hover {
     width: 80%;
 }
 
-.card-achiev {
+.div-card-achiev {
     width: 30%;
     height: 100%;
+    /* box-shadow: 0 0 3px 2px rgba(141, 141, 141, 0.575); */
+    margin: .5rem;
+    
+}
+
+.card-achiev {
+    /* width: 30%; */
+    /* height: 100%; */
     /* background-image: url('../../img/noir.jpg'); */
-    cursor: pointer;
+    /* cursor: pointer; */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -273,7 +282,8 @@ a:hover {
     transition: all 300ms ease-out;
     opacity: 0;
     width: 100%;
-    height: 91.5%;
+    /* height: 91.5%; */
+    height: 100%;
     border-radius: .375rem;
     padding: 1rem;
 }
@@ -292,12 +302,22 @@ a:hover {
     -webkit-transform: translateY(30px);
 }
 
-.card-achiev .title-fade {
-    font-size: 1.8em;
+.title-fade {
+    font-size: xx-large;
     opacity: 0;
     transition-delay: 0.2s;
     transition-duration: 0.3s;
     margin-top: 2rem;
+    text-shadow: 0px 0px 4px white, 0px 0px 9px black;
+}
+
+.btn-card{
+    text-decoration: auto;
+    color: snow;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.2rem;
+    background-color: #0d6efd;
+    box-shadow: 0 0 3px 2px rgb(44 44 44 / 78%), 0 0 3px 2px rgba(141, 141, 141, 0.575);
 }
 
 .card-achiev:hover .title-fade,
@@ -312,6 +332,7 @@ a:hover {
     transform: translateY(20px);
     -webkit-transform: translateY(20px);
 }
+
 
 
 /* --------------------------------------------------------------------------------------------- */
@@ -334,10 +355,10 @@ a:hover {
         "activity img useCase"
         "activity sequense useCase";
 
-    margin: 2rem auto ;
+    margin: 2rem auto;
     padding: 2rem;
     width: inherit;
-    
+
 }
 
 .object {
@@ -379,7 +400,8 @@ a:hover {
     grid-area: activity;
     padding: 1rem;
     box-shadow: -1px 1px 3px 3px #7c7c7c69;
-    border-radius: 50% 0% 50% 50%;;
+    border-radius: 50% 0% 50% 50%;
+    ;
 }
 
 
@@ -587,24 +609,34 @@ details[open] {
         flex-direction: column;
     }
 
-    .card-achiev {
-        width: 80vw;
-    }
-
-
-
 }
 
-@media (min-width: 990px) {
-
-    /* .msgDoc {
+/* @media (hover: hover) {
+    .card-achiev {
         display: none;
     }
+} */
 
-    .field{
-        right: 30%;
-        left: 30%;
-    } */
+@media (min-width: 900px) and (max-width: 1355px) {
+
+    .card-achiev .fadedbox {
+        padding: 0;
+    }
+
+    .fadedbox {
+        padding: auto;
+    }
+
+
+    .card-achiev .title-fade {
+        font-size: auto;
+        margin: auto;
+        color: green;
+    }
+
+    .card-body-achiev>p {
+        font-size: auto;
+    }
 
 }
 
@@ -642,6 +674,30 @@ details[open] {
 
     .div-link-contact a {
         color: black;
+    }
+
+
+}
+
+@media(width <=920px) {
+    .div-card-achiev {
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+
+    .card-achiev .fadedbox {
+        opacity: 1;
+    }
+
+    .card-achiev .title-fade {
+        opacity: 1;
+        font-size: xxx-large;
+        /* color: red; */
+    }
+    .card-body-achiev p{
+        color: red;
+        font-size: x-large;
     }
 }
 

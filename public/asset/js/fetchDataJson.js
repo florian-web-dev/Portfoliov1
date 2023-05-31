@@ -93,6 +93,7 @@ const achievementShow = document.querySelector('#achievementShow');
 function eachDataForPush() {
     fetchJson("public/asset/js/datas.json").then((datas) => {
 
+        
         for (const allSkills of datas.skills) {
 
             // ---------------------------------------
@@ -193,13 +194,10 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
 function eachData(allSkills, elm, callback = viewCard) {
     let chaine = "";
 
-    // if (allSkills === undefined ) {
-    //     
-    // }
     // console.log(document.readyState);
-    if (document.readyState != "complete") {
-        window.location.reload();
-    }
+    // if (document.readyState != "complete") {
+    //     window.location.reload();
+    // }
     allSkills.forEach(skill => {
         chaine += callback(skill)
     });
@@ -322,6 +320,7 @@ function viewList2(data) {
 
 function viewAchiev(data) {
     return `
+    <div class="div-card-achiev">
         <div class="card-achiev m-3 ">
             <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100 rounded" />
             <div class="fadedbox">
@@ -330,13 +329,14 @@ function viewAchiev(data) {
                 <div class="card-body-achiev">
                     <p title="Concepteur Développeur Application">${data.subtitle}</p>
                     <a href="./pages/realisation.html" onauxclick="addCookie('${data.title}')" onclick="addCookie('${data.title}')"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir</a>
+                        class="btn-card" target="_blank" rel="noopener noreferrer">Voire plus</a>
                 </div>
 
             </div>
-            <h6 class="m-1">${data.context}</h6>
+            
         </div>
-
+        <h6 class="m-1">${data.context}</h6>
+    </div>
 `
 }
 // console.log(arrayLang);

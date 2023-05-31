@@ -40,17 +40,16 @@ async function fetchJson(url) {
     try {
         let response = await fetch(url, myInit)
         // console.log(`try : Reponse : ${response.status} ${response.statusText} `)
-        console.log(response);
+        // console.log(response);
         if (response.ok) {
 
             let datas = await response.json();
-
-            // console.log(datas);
 
             return datas
 
         } else {
             console.log(`pas Ok : Invalid Response `);
+            window.location.reload();
         }
     } catch ($e) {
         console.log("Catch : ERROR " + $e)
