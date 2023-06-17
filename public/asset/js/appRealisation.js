@@ -47,7 +47,7 @@ function checkACookieExists() {
         // console.log(cookieValue);
 
         // console.log(document.readyState);
-        fetchJson('../../datas.json').then((datas) => {
+        fetchJson('./../public/asset/js/datasSkills.json').then((datas) => {
             // console.log(datas.realisation);
 
             let dataRealisation = datas.realisation
