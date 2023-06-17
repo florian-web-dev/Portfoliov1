@@ -65,7 +65,7 @@ const achievementShow = document.querySelector('#achievementShow');
 
 
 function eachDataForPush() {
-    fetchJson("public/asset/js/datas.json").then((datas) => {
+    fetchJson("../../datas.json").then((datas) => {
 
 
         for (const allSkills of datas.skills) {
