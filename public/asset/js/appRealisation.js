@@ -17,7 +17,6 @@ const testReal = document.querySelector('#testReal')
 
 function viewAchievementTableImg(folderImg, data, minefile, size) {
 
-
     return `
         <img class="m-3" src="../public/img/${folderImg}/${data}_logo.${minefile}" alt="${data}" title="${data}"
         style="width: ${size};">
