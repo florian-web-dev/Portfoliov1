@@ -108,9 +108,11 @@ a:hover {
     bottom: 5%;
     right: 3%;
 }
-.div-border{
+
+.div-border {
     border: 1px solid #8986863d;
 }
+
 /* ------------------------------ Show on scroll ------------------------------*/
 
 
@@ -238,7 +240,6 @@ a:hover {
 }
 
 
-
 /* ---------------------------------------------------------------------------------------
                                         Section Réalisation
 --------------------------------------------------------------------------------------- */
@@ -249,7 +250,7 @@ a:hover {
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     width: 80%;
 }
 
@@ -258,7 +259,7 @@ a:hover {
     height: 100%;
     /* box-shadow: 0 0 3px 2px rgba(141, 141, 141, 0.575); */
     margin: .5rem;
-    
+
 }
 
 .card-achiev {
@@ -313,7 +314,7 @@ a:hover {
     /* text-shadow: 0px 0px 4px white, 0px 0px 9px black; */
 }
 
-.btn-card{
+.btn-card {
     text-decoration: auto;
     color: snow;
     padding: 0.6rem 1.2rem;
@@ -487,8 +488,9 @@ details[open] {
     color: aliceblue;
     text-align: center;
     padding: 3rem;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 1rem;
+    /* border: 1px solid rgba(255, 255, 255, .3); */
+    border: 4px ridge rgba(255, 255, 255, .3);
+    border-radius: 1.5rem;
     /* background-color: var(--color-footer); */
     background-color: #3e3633;
     transform-style: preserve-3d;
@@ -631,14 +633,18 @@ details[open] {
 
 
     .card-achiev .title-fade {
-        font-size: auto;
+        font-size: x-large;
         margin: auto;
-        color: green;
+      
+    }
+    .title-fade{
+        padding: .5rem;
+    }
+    .card-body-achiev>p {
+        font-size: inherit;
     }
 
-    .card-body-achiev>p {
-        font-size: auto;
-    }
+
 
 }
 
@@ -655,6 +661,8 @@ details[open] {
         background-size: cover;
         background-repeat: no-repeat;
         height: 154vh;
+
+        /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); */
         /* height: 120%;
         width: 100%; */
     }
@@ -681,7 +689,7 @@ details[open] {
 
 }
 
-@media(width <=920px) {
+@media(width <=900px) and (width >= 460px) {
     .div-card-achiev {
         width: 100%;
         height: auto;
@@ -690,18 +698,22 @@ details[open] {
 
     .card-achiev .fadedbox {
         opacity: 1;
+
     }
+
 
     .card-achiev .title-fade {
         opacity: 1;
         margin: auto;
-        /* font-size: xxx-large; */
-        /* color: red; */
     }
-    /* .card-body-achiev p{
-        color: red;
-        font-size: x-large;
-    } */
+
+    .card-achiev .fadedbox {
+   
+        padding: 5rem 0;
+
+    }
+
+
 }
 
 /* ----------CSS footer ----------------------*/

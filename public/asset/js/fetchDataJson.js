@@ -43,58 +43,34 @@ const arrayNodeListLangB = [php, java, sql];
 
 const arrayLang = [];
 const arrayFrame = [];
-const arrayAnalyse = [];
-const arrayMobil = [];
-const arrayCms = [];
-const arrayTools = [];
+
+
+// const arrayAnalyse = [];
+// const arrayMobil = [];
+// const arrayMobil = new Array()
+// const arrayCms = [];
+// const arrayTools = [];
 const arrayAchiev = [];
 
-const showProgress = document.querySelectorAll("[class*='showProgress-']")
+// const arrayOtherSkill = []
 
+const arrayAllSkill = [];
+
+const showProgress = document.querySelectorAll("[class*='showProgress-']")
 
 
 const achievementShow = document.querySelector('#achievementShow');
 
 
-// const myHeaders = new Headers();
-// const myInit = {
-//     method: 'GET',
-//     headers: myHeaders,
-//     mode: 'cors',
-//     // mode: 'no-cors',
-//     cache: 'default',
-
-// };
-
-
-// async function fetchJson(url) {
-//     try {
-//         let response = await fetch(url, myInit)
-//         // console.log(`try : Reponse : ${response.status} ${response.statusText} `)
-//         // console.log(response);
-//         if (response.ok) {
-
-//             let datas = await response.json();
-
-//             // console.log(datas);
-
-//             return datas
-
-//         } else {
-//             console.log(`pas Ok : Invalid Response `);
-//         }
-//     } catch ($e) {
-//         console.log("Catch : ERROR " + $e)
-//     }
-
-// }
 
 
 function eachDataForPush() {
     fetchJson("public/asset/js/datas.json").then((datas) => {
 
-        
+
         for (const allSkills of datas.skills) {
+
+            arrayAllSkill.push(allSkills)
 
             // ---------------------------------------
             // ---------------- skills ---------------
@@ -118,34 +94,9 @@ function eachDataForPush() {
             let skillFrameWork = allSkills.framework;
             arrayFrame.push(skillFrameWork)
 
-            //--------- analyse --------- //
-            let skillsAnalyse = allSkills.analyse;
-            arrayAnalyse.push(skillsAnalyse)
-
-            //--------- analyse --------- //
-            let skillsMobil = allSkills.mobil;
-            arrayMobil.push(skillsMobil)
-
-            //--------- cms --------- //
-            let skillsCms = allSkills.cms;
-            arrayCms.push(skillsCms)
-
-            //--------- tools --------- //
-            let skillTools = allSkills.tools
-            arrayTools.push(skillTools);
 
         }
 
-        // ---------------------------------------
-        // ---------------- formation ------------
-        // ---------------------------------------
-
-        let formationArr = datas.formation;
-
-        let formationDw = formationArr.dwwm;
-        let formationCda = formationArr.cda;
-        // eachData(formationDw, idFormationDw, viewFormation)
-        // eachData(formationCda, idFormationCda, viewFormation)
 
 
         // ---------------------------------------
@@ -194,10 +145,6 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
 function eachData(allSkills, elm, callback = viewCard) {
     let chaine = "";
 
-    // console.log(document.readyState);
-    // if (document.readyState != "complete") {
-    //     window.location.reload();
-    // }
     allSkills.forEach(skill => {
         chaine += callback(skill)
     });
@@ -324,9 +271,8 @@ function viewAchiev(data) {
         <div class="card-achiev">
             <img src="public/img/noir.jpg" alt="Projet Suivi Séance" class="w-100 rounded" />
             <div class="fadedbox">
-
-                <h5 class="title-fade">${data.title}</h5>
                 <div class="card-body-achiev">
+                    <h5 class="title-fade">${data.title}</h5>
                     <p title="Concepteur Développeur Application">${data.subtitle}</p>
                     <a href="./pages/realisation.html" onauxclick="addCookie('${data.title}')" onclick="addCookie('${data.title}')"
                         class="btn-card" target="_blank" rel="noopener noreferrer">Voire plus</a>
@@ -341,12 +287,15 @@ function viewAchiev(data) {
 }
 // console.log(arrayLang);
 
-// console.log(arrayAchiev);
+// console.log(arrayMobil);
+
+// console.log(arrayAllSkill);
+
 
 window.addEventListener('load', () => {
     console.log('La page est complètement chargée load');
     // console.log(document.readyState);
-
+    // console.log(typeof arrayMobil);
     reportWindowSize();
 
     eachFramLang(arrayLang, true, true, viewCard)
@@ -356,16 +305,36 @@ window.addEventListener('load', () => {
     eachFramLang(arrayFrame, true, false, viewCard)
     eachFramLang(arrayFrame, false, false, viewCard)
 
-    eachData(arrayMobil[0], idSectionMobil);
-
-    eachData(arrayCms[0], idSectionCms);
-
-    eachData(arrayTools[0], idSectionTools);
 
 
-    eachData(arrayAnalyse[0], idSectionUml, viewList2);
+    for (const key in arrayAllSkill) {
+        if (Object.hasOwnProperty.call(arrayAllSkill, key)) {
+
+            const element = arrayAllSkill[key];
+
+            eachData(element.mobil, idSectionMobil)
+            eachData(element.cms, idSectionCms);
+
+            eachData(element.tools, idSectionTools);
+
+            eachData(element.analyse, idSectionUml, viewList2);
+
+            // eachData(skill., achievementShow, viewAchiev);
+
+        }
+
+
+    }
+    for (const key in arrayAllSkill[0]) {
+
+        console.log(key);
+
+    }
+
 
     eachData(arrayAchiev[0], achievementShow, viewAchiev);
+
+    // console.log(typeof arrayMobil);
 })
 
 
