@@ -50,6 +50,9 @@ async function fetchJson(url) {
         } else {
             console.log(`pas Ok : Invalid Response `);
             // window.location.reload();
+            console.log(response.status);
+            console.log(response.statusText);
+            console.log(response.url);
         }
     } catch ($e) {
         console.log("Catch : ERROR " + $e)
