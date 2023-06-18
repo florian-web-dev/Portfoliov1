@@ -142,7 +142,7 @@ function eachFramLang(arrayFramOrLanf, isFront, isLang, callbackRunder) {
  * @param {string} elm 
  * @param {Function} callback 
  */
-function eachData(allSkills, elm, callback = viewCard) {
+async function eachData(allSkills, elm, callback = viewCard) {
     let chaine = "";
 
     allSkills.forEach(skill => {
@@ -320,16 +320,17 @@ window.addEventListener('load', () => {
             eachData(element.analyse, idSectionUml, viewList2);
 
             // eachData(skill., achievementShow, viewAchiev);
+        
 
         }
 
 
     }
-    for (const key in arrayAllSkill[0]) {
+    // for (const key in arrayAllSkill[0]) {
 
-        console.log(key);
+    //     console.log(key);
 
-    }
+    // }
 
 
     eachData(arrayAchiev[0], achievementShow, viewAchiev);
